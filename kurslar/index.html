@@ -43,6 +43,12 @@ footer a:hover { text-decoration:underline;}
   overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
 }
 </style>
+ <script>
+fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
+  .then(r => r.text())
+  .then(t => document.head.insertAdjacentHTML("beforeend", t))
+  .catch(e => console.error("ek_head yüklenemedi", e));
+</script> 
 </head>
 <body>
 
