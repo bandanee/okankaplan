@@ -3,28 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sol Offcanvas Toggle + Fixed Navbar + TOC + Footer</title>
+  <title>Modern GitHub Tarzı Layout</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
-      padding-top: 56px; /* Navbar yüksekliği kadar boşluk bırak */
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+      padding-top: 56px; /* Navbar yüksekliği */
+      color: #333;
     }
-    /* Sol üst sabit toggle butonu */
+    /* Sol üst sabit offcanvas toggle butonu */
     #offcanvasToggle {
       position: fixed;
       top: 10px;
       left: 10px;
-      z-index: 1055; /* Navbar ve diğer içerik üzerinde */
+      z-index: 1080;
     }
-    .toc {
-      position: sticky;
-      top: 70px;
+    /* Main içerik ortada ve maksimum genişlik */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     footer {
       background-color: #343a40;
       color: #fff;
       padding: 20px 0;
+      margin-top: 40px;
     }
     footer a {
       color: #ffc107;
@@ -33,20 +44,30 @@
     footer a:hover {
       text-decoration: underline;
     }
+    /* TOC sağda sticky (isteğe bağlı) */
+    .toc {
+      position: sticky;
+      top: 70px;
+      max-width: 220px;
+    }
+    @media (max-width: 992px) {
+      .toc {
+        display: none; /* Tablet ve mobilde gizle */
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- Sol üst Offcanvas toggle butonu -->
-<button class="btn btn-primary" type="button" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-  &#9776; Menü
+<!-- Sol üst offcanvas toggle -->
+<button class="btn btn-primary" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+  &#9776; Kategoriler
 </button>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Logo</a>
-    <!-- Navbar collapse varsa mobilde buraya eklenir -->
   </div>
 </nav>
 
@@ -66,15 +87,39 @@
   </div>
 </div>
 
-<!-- İçerik ve Sağ TOC -->
-<div class="container-fluid">
-  <div class="row">
-    <!-- Ana içerik -->
-    <main class="col-lg-9 col-md-8 col-12 py-4">
+<!-- İçerik -->
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <!-- Main içerik -->
+    <main class="col-12 col-lg-9">
       <section id="section1">
         <h2>Bölüm 1</h2>
-        <p>Burada bölüm 1 içeriği yer alır...</p>
+        <p>Bu modern GitHub tarzı layout örneğinde ana içerik ortada dar, sol ve sağda boşluk bulunuyor.</p>
       </section>
       <section id="section2">
         <h2>Bölüm 2</h2>
-        <p>Burada bölüm 2 içeriği yer alır...</p>
+        <p>Responsive tasarım, mobilde tam genişlikte, büyük ekranda ise ortada dar içerik.</p>
+      </section>
+      <section id="section3">
+        <h2>Bölüm 3</h2>
+        <p>Sol üstte offcanvas toggle butonu, kategoriler menüsünü açıyor.</p>
+      </section>
+      <section id="section4">
+        <h2>Bölüm 4</h2>
+        <p>Footer modern, sade ve site sonunda yer alıyor.</p>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2026 Tüm Hakları Saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
