@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modern GitHub Tarzı Layout</title>
+  <title>Sağ Offcanvas + Sol Offcanvas + Main</title>
   <!-- Bootstrap CSS -->
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,17 +15,23 @@
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f5f5f5;
-      padding-top: 56px; /* Navbar yüksekliği */
+      padding-top: 56px;
       color: #333;
     }
-    /* Sol üst sabit offcanvas toggle butonu */
-    #offcanvasToggle {
+    /* Sol üst offcanvas toggle */
+    #offcanvasLeftToggle {
       position: fixed;
       top: 10px;
       left: 10px;
       z-index: 1080;
     }
-    /* Main içerik ortada ve maksimum genişlik */
+    /* Sağ üst offcanvas toggle */
+    #offcanvasRightToggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1080;
+    }
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -44,37 +53,31 @@
     footer a:hover {
       text-decoration: underline;
     }
-    /* TOC sağda sticky (isteğe bağlı) */
-    .toc {
-      position: sticky;
-      top: 70px;
-      max-width: 220px;
-    }
-    @media (max-width: 992px) {
-      .toc {
-        display: none; /* Tablet ve mobilde gizle */
-      }
-    }
   </style>
 </head>
 <body>
 
-<!-- Sol üst offcanvas toggle -->
-<button class="btn btn-primary" id="offcanvasToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-  &#9776; Kategoriler
+<!-- Sol üst toggle -->
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+  &#9776; 
+</button> 
+
+<!-- Sağ üst toggle -->
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+<i class="fas fa-comment-dots"></i>
 </button>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="#" style="padding-left:40px">Logo</a>
   </div>
 </nav>
 
-<!-- Offcanvas Menü (Sol) -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+<!-- Sol Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasMenuLabel">Kategoriler</h5>
+    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Kategoriler</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
   </div>
   <div class="offcanvas-body">
@@ -87,26 +90,69 @@
   </div>
 </div>
 
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">İletişim</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+  </div>
+  <div class="offcanvas-body">
+    
+    <p><strong>İsim:</strong> Okan Kaplan</p>
+
+    <!-- Form -->
+    <form>
+      <div class="mb-3">
+        <label for="nameInput" class="form-label">İsim</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="Adınızı girin">
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Mesaj</label>
+        <textarea class="form-control" id="messageInput" rows="3" placeholder="Mesajınızı yazın"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Gönder</button>
+    </form>
+
+    <!-- WAME (WhatsApp Me) -->
+    <a href="https://wa.me/905362279390" target="_blank" class="btn btn-success w-100 mt-3">WhatsApp ile Mesaj Gönder</a>
+
+    <!-- Sosyal ve platform linkleri -->
+    <div class="mt-4">
+      <h6>Sosyal ve Platformlar</h6>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="https://www.youtube.com/@Ki%C5%9FiselGeli%C5%9Fim-Video-Pdf-img" target="_blank" class="text-danger" title="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://www.udemy.com/user/okan-kaplan-7" target="_blank" class="text-dark" title="Udemy"><i class="fas fa-graduation-cap fa-lg"></i></a>
+        <a href="https://shopier.com/banddes" target="_blank" class="text-success" title="Mağaza"><i class="fas fa-store fa-lg"></i></a>
+        <a href="https://linkedin.com/in/canvasor" target="_blank" class="text-primary" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://kisisel-gelisim-video-pdfders-imgpack.blogspot.com" target="_blank" class="text-warning" title="Blog"><i class="fab fa-blogger fa-lg"></i></a>
+        <a href="https://www.etsy.com/shop/bandanee" target="_blank" class="text-info" title="Etsy"><i class="fab fa-etsy fa-lg"></i></a>
+        <a href="https://dev.to/okan_kaplan_livehtml" target="_blank" class="text-dark" title="Dev.to"><i class="fab fa-dev fa-lg"></i></a>
+        <a href="https://sketchfab.com/canvasor" target="_blank" class="text-secondary" title="Sketchfab"><i class="fas fa-cube fa-lg"></i></a>
+        <a href="https://codepen.io/livehtml" target="_blank" class="text-black" title="CodePen"><i class="fab fa-codepen fa-lg"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- İçerik -->
 <div class="container my-4">
   <div class="row justify-content-center">
-    <!-- Main içerik -->
     <main class="col-12 col-lg-9">
       <section id="section1">
         <h2>Bölüm 1</h2>
-        <p>Bu modern GitHub tarzı layout örneğinde ana içerik ortada dar, sol ve sağda boşluk bulunuyor.</p>
+        <p>Sol offcanvas kategori, sağ offcanvas iletişim.</p>
       </section>
       <section id="section2">
         <h2>Bölüm 2</h2>
-        <p>Responsive tasarım, mobilde tam genişlikte, büyük ekranda ise ortada dar içerik.</p>
+        <p>Responsive tasarım, modern ve sade layout.</p>
       </section>
       <section id="section3">
         <h2>Bölüm 3</h2>
-        <p>Sol üstte offcanvas toggle butonu, kategoriler menüsünü açıyor.</p>
+        <p>Toggle butonlar sol ve sağ offcanvas için ayrı.</p>
       </section>
       <section id="section4">
         <h2>Bölüm 4</h2>
-        <p>Footer modern, sade ve site sonunda yer alıyor.</p>
+        <p>Footer modern ve sade, sayfa sonunda yer alıyor.</p>
       </section>
     </main>
   </div>
