@@ -1,6 +1,6 @@
 {
-  "name": "Okan Kaplan Site",
-  "short_name": "OkanKaplan",
+  "name": "Okan Kaplan",
+  "short_name": "Okan",
   "start_url": "/okankaplan/",
   "display": "standalone",
   "background_color": "#ffffff",
