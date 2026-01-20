@@ -7,38 +7,37 @@
 <meta name="description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
 <meta name="keywords" content="Okan Kaplan, web tasarım, dijital çözümler, SEO uyumlu web, responsive tasarım, UI/UX danışmanlığı, performans optimizasyonu, müşteri odaklı tasarım, modern web siteleri, web geliştirme hizmetleri">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="">
+<link rel="canonical" href="https://bandanee.github.io/okankaplan/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Okan Kaplan – Web Tasarım, Dijital Çözümler ve SEO Uyumlu Web Siteleri">
 <meta property="og:description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="">
-<meta property="og:image" content="">
+<meta property="og:url" content="https://bandanee.github.io/okankaplan/">
+<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/og-image.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Okan Kaplan – Web Tasarım, Dijital Çözümler ve SEO Uyumlu Web Siteleri">
 <meta name="twitter:description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
-<meta name="twitter:image" content="">
+<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/twitter-image.jpg">
 
-<!-- Bootstrap CSS -->
+<!-- CSS ve Fontlar -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
 <link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
-main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+main { max-width:1000px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.08);}
 footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
 footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
+.nav .nav-link { padding-left:0.5rem;}
+.nav .nav .nav-link { padding-left:1.5rem; font-size:0.95rem;}
 </style>
 </head>
 <body>
@@ -52,49 +51,112 @@ footer a:hover { text-decoration:underline;}
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="#">Okan Kaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
+<!-- Sol Offcanvas (Kategoriler) -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Kategoriler</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/">Dijital İçerik Üretimi</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">Blog & Makaleler</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/seo/">SEO Uyumlu İçerik</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">Sosyal Medya İçerikleri</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/">Eğitim ve Kurslar</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">Online Kurslar</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/workshop/">Workshop & Webinar</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/egitim-materyalleri/">PDF & Sunumlar</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/">Web Hizmetleri</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/tasarim/">Web Tasarımı</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/gelistirme/">Web Geliştirme</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/ui-ux/">UI/UX Tasarımı</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/">3D & Animasyon</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/modelleme/">3D Modelleme</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/animasyon/">Animasyon & Motion Graphics</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/sanal-urun/">Sanal Ürün & Sahne</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/">Ses & Müzik</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/podcast/">Podcast & Sesli İçerik</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/jingle/">Jingle & Arka Plan Müziği</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/duzenleme/">Ses Düzenleme & Mastering</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/">Video Prodüksiyon</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/kurgu/">Kurgu & Montaj</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/tanitim/">Tanıtım & Eğitim Videoları</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/animasyon/">Video Animasyon</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/">Grafik & Görsel Tasarım</a>
+        <ul class="nav flex-column ms-3 mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/logo/">Logo & Kurumsal Kimlik</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/sosyal-medya/">Sosyal Medya Görselleri</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/brosur/">Broşür & PDF Tasarımı</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<!-- Sağ Offcanvas -->
+<!-- Sağ Offcanvas (TOC veya içerik listesi) -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+  <div id="toc-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+      .then(r => { if (!r.ok) throw new Error('toc.html yüklenemedi'); return r.text(); })
+      .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
 <!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>Hakkımda</h3><p>Merhaba, ben Okan Kaplan. Web tasarım ve dijital çözümler alanında uzun yıllardır faaliyet gösteriyorum. Amacım, modern, hızlı ve kullanıcı dostu web siteleri tasarlayarak müşterilerimin dijital dünyadaki varlıklarını güçlendirmektir. Her proje benim için özel bir yolculuktur ve müşterilerimle yakın iletişim kurarak onların ihtiyaçlarını en doğru şekilde anlamaya çalışırım.</p><h3>Amacım</h3><p>Amacım, kullanıcı deneyimini ön planda tutan, SEO uyumlu ve responsive web tasarımlarıyla markaların dijital görünürlüğünü artırmaktır. Her müşteriye özgün çözümler sunarak, onların hedef kitlesiyle etkili bir şekilde iletişim kurmalarını sağlamak istiyorum. Teknolojiyi yaratıcı ve işlevsel bir şekilde kullanmak, projelerimi diğerlerinden ayıran en önemli özelliğimdir.</p><h3>Hizmetlerim</h3><p>Web tasarım, kullanıcı arayüzü (UI) ve kullanıcı deneyimi (UX) danışmanlığı, SEO optimizasyonu, responsive ve mobil uyumlu tasarım, performans ve hız optimizasyonu gibi çeşitli hizmetler sunuyorum. Amacım, sadece estetik bir görünüm sağlamak değil, aynı zamanda işlevsel ve etkili çözümler sunmaktır.</p><h3>Çalışma Sürecim</h3><p>Her projeye detaylı bir analiz ile başlarım. İhtiyaç analizi, rakip incelemesi, kullanıcı deneyimi tasarımı ve teknik optimizasyon adımlarını takip ederek etkili ve kaliteli web çözümleri üretirim. Süreç boyunca müşterilerimle sürekli iletişimde kalarak, geri bildirimleri değerlendirir ve projenin her aşamasında onay alırım.</p><h3>Müşteri Memnuniyeti</h3><p>Müşteri memnuniyeti benim önceliğimdir. Proje süresince sürekli iletişim kurar, geri bildirimleri değerlendirir ve projeyi müşterinin beklentilerine göre şekillendiririm. Başarı, birlikte çalıştığımız her adımda ortaya çıkar.</p><h3>Referanslar</h3><p>Bugüne kadar farklı sektörlerde birçok web projesine imza attım. İşbirliği yaptığım şirketler ve bireyler, sunduğum hizmetin kalitesini ve profesyonelliğini onaylamaktadır. Referanslarım, işime olan bağlılığımı ve müşteri memnuniyetine verdiğim önemi göstermektedir.</p><h3>Gelecek Vizyonum</h3><p>Dijital dünyadaki hızlı değişimlere uyum sağlayarak, her zaman yenilikçi ve modern çözümler üretmeyi hedefliyorum. Amacım, müşterilerimin dijital dönüşüm süreçlerinde güvenilir bir partner olarak yanlarında olmak ve onların iş hedeflerine ulaşmalarını kolaylaştırmaktır.</p>
+<h2>Hakkımda</h2>
+<p>Merhaba, ben Okan Kaplan. Web tasarım ve dijital çözümler alanında uzun yıllardır faaliyet gösteriyorum. Amacım, modern, hızlı ve kullanıcı dostu web siteleri tasarlayarak müşterilerimin dijital dünyadaki varlıklarını güçlendirmektir. Her proje benim için özel bir yolculuktur ve müşterilerimle yakın iletişim kurarak onların ihtiyaçlarını en doğru şekilde anlamaya çalışırım.</p>
+
+<h2>Amacım</h2>
+<p>Kullanıcı deneyimini ön planda tutan, SEO uyumlu ve responsive web tasarımlarıyla markaların dijital görünürlüğünü artırmayı hedefliyorum. Her müşteriye özgün çözümler sunarak, onların hedef kitlesiyle etkili bir şekilde iletişim kurmalarını sağlıyorum.</p>
+
+<h2>Hizmetlerim</h2>
+<p>Web tasarım, UI/UX danışmanlığı, SEO optimizasyonu, responsive ve mobil uyumlu tasarım, performans optimizasyonu, dijital içerik üretimi, eğitim ve kurslar, 3D & animasyon, ses ve video prodüksiyon, grafik & görsel tasarım gibi kapsamlı hizmetler sunuyorum.</p>
+
+<h2>Çalışma Sürecim</h2>
+<p>Her projeye detaylı bir analiz ile başlarım. İhtiyaç analizi, rakip incelemesi, kullanıcı deneyimi tasarımı ve teknik optimizasyon adımlarını takip ederek etkili ve kaliteli web çözümleri üretirim. Süreç boyunca müşterilerimle sürekli iletişimde kalarak, geri bildirimleri değerlendiririm.</p>
+
+<h2>Müşteri Memnuniyeti</h2>
+<p>Müşteri memnuniyeti önceliğimdir. Proje süresince sürekli iletişim kurar, geri bildirimleri değerlendirir ve projeyi müşterinin beklentilerine göre şekillendiririm.</p>
+
+<h2>Referanslar</h2>
+<p>Bugüne kadar farklı sektörlerde birçok web projesine imza attım. İşbirliği yaptığım şirketler ve bireyler, sunduğum hizmetin kalitesini ve profesyonelliğini onaylamaktadır.</p>
+
+<h2>Gelecek Vizyonum</h2>
+<p>Dijital dünyadaki hızlı değişimlere uyum sağlayarak, her zaman yenilikçi ve modern çözümler üretmeyi hedefliyorum. Müşterilerimin dijital dönüşüm süreçlerinde güvenilir bir partner olarak yanlarında olmak ve iş hedeflerine ulaşmalarını kolaylaştırmak önceliğimdir.</p>
 </main>
 </div>
 
 <!-- Footer -->
 <footer>
 <div class="container">
-<p>&copy; 2026 Okan Kaplan. | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
+<p>&copy; 2026 Okan Kaplan | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
 </div>
 </footer>
 
