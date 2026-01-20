@@ -11,10 +11,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
+  <link rel="stylesheet" href="https://bandanee/root/main/import/style.css">
 <script>
     // head.html içeriğini fetch ile yükle
-    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/head.html')
+    fetch('https://bandanee/root/main/import/head.html')
       .then(response => {
         if (!response.ok) throw new Error('head.html yüklenemedi');
         return response.text();
@@ -39,7 +39,7 @@
 
   <script>
     // Fetch ile nav.html içeriğini çekip body içindeki placeholder'a ekle
-    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+    fetch('https://bandanee/root/main/import/nav.html')
       .then(response => {
         if (!response.ok) throw new Error('Nav yüklenemedi');
         return response.text();
@@ -75,14 +75,16 @@
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="text-center">
-  <div class="container">
-    <p>&copy; 2026 Tüm Hakları Saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
-  </div>
-</footer>
+  <script>
+    // footer.html fetch
+    fetch('https://bandanee/root/main/import/footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+      .catch(err => console.error('footer.html yüklenemedi', err));
+  </script>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
