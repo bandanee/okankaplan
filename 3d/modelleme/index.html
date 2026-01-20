@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Modelleme Hizmeti — Ürün & Mimari & Proje Modelleme | Okan Kaplan</title>
+<meta name="description" content="3D modelleme hizmeti ile ürünlerinizi, mimari projelerinizi veya görsel içeriklerinizi dijital ortama taşıyın. Yüksek kalite, gerçekçi detaylar ve görsel sunum çözümleri ile markanızın dijital varlığını güçlendirin.">
+<meta name="keywords" content="3D modelleme, 3D tasarım, ürün modelleme, mimari modelleme, görselleştirme, render, 3D içerik, dijital model, animasyon için model, Okan Kaplan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bandanee.github.io/okankaplan/3d/modelleme/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="3D Modelleme Hizmeti — Ürün & Mimari & Proje Modelleme | Okan Kaplan">
+<meta property="og:description" content="3D modelleme hizmeti ile ürünlerinizi, mimari projelerinizi veya görsel içeriklerinizi dijital ortama taşıyın. Yüksek kalite, gerçekçi detaylar ve görsel sunum çözümleri ile markanızın dijital varlığını güçlendirin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bandanee.github.io/okankaplan/3d/modelleme/">
+<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/3d-modelleme-thumbnail.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="3D Modelleme Hizmeti — Ürün & Mimari & Proje Modelleme | Okan Kaplan">
+<meta name="twitter:description" content="3D modelleme hizmeti ile ürünlerinizi, mimari projelerinizi veya görsel içeriklerinizi dijital ortama taşıyın. Yüksek kalite, gerçekçi detaylar ve görsel sunum çözümleri ile markanızın dijital varlığını güçlendirin.">
+<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/3d-modelleme-thumbnail.jpg">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<!-- Özel CSS -->
+<style>
+body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
+main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
+footer a { color:#ffc107; text-decoration:none;}
+footer a:hover { text-decoration:underline;}
+#offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
+#offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
+  .offcanvas {
+  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
+}
+</style>
+<script>
+fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
+  .then(r => r.text())
+  .then(t => document.head.insertAdjacentHTML("beforeend", t))
+  .catch(e => console.error("ek_head yüklenemedi", e));
+</script>
+</head>
+<body>
+
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
+
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+  </div>
+</nav>
+
+<!-- Sol Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div id="toc-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<!-- Main içerik -->
+<div class="container my-4">
+<main class="col-12 col-lg-9 mx-auto">
+<h3>🎨 3D Modelleme Hizmeti — İnovatif Dijital Çözümler</h3><p>3D modelleme, dijital ortamda <strong>gerçek dünyadaki nesneleri ve projeleri üç boyutlu olarak yeniden oluşturma</strong> sanatıdır. Bu süreçte özel yazılımlar kullanılarak nesneler; ürün tanıtımı, mimari görselleştirme, animasyon projeleri veya web entegrasyonları gibi farklı alanlarda kullanılmak üzere yüksek detaylı dijital modellere dönüştürülür.</p><p><br></p><h3>📦 Ürün Modelleme &amp; Görsel Sunum</h3><p>Ürünlerinizi dijital ortamda üç boyutlu olarak modelleyerek; e‑ticaret sitelerinde, tanıtım videolarında veya kampanyalarda <strong>360° etkileşimli görseller</strong> ile sunabilirsiniz. Böylece potansiyel müşterileriniz ürünlerin tüm açılarını inceleyebilir, detaylı özellikleri görebilir ve marka deneyimini güçlendirebilirsiniz.</p><p><br></p><h3>🏛️ Mimari ve Mekânsal Modelleme</h3><p>Mimari projeleriniz için 3D modelleme, yapıların gerçekçi ve etkileyici bir şekilde sunulmasını sağlar. Hem iç hem dış mekan tasarımlarında; ışık, gölge ve gerçekçi detaylarla desteklenen modeller ile projelerinizi müşterilere etkileyici şekilde gösterebilirsiniz.</p><p><br></p><h3>🎥 Animasyon ve Render için 3D Modeller</h3><p>3D modeller sadece statik görseller oluşturmakla kalmaz; tanıtım videoları, animasyonlar ve interaktif sunumlar için de güçlü bir temel oluşturur. Bu modeller render ile gerçekçi görsellere dönüştürülerek hem pazarlama hem de iletişim amaçlı kullanılır.</p><p><br></p><h3>🚀 Neden 3D Modelleme?</h3><p>3D modelleme, hem dijital hem de fiziksel projeler için büyük avantajlar sağlar:</p><ul><li>Ziyaretçilerin ürün veya projenizi tüm açılardan görmesini sağlar</li><li>İçeriklerin web ve pazarlama materyallerinde etkileşimini artırır</li><li>Mimari ve tasarım sunumlarında profesyonel görüntü sağlar</li><li>Animasyon ve görsel projelerin temelini oluşturur</li><li> Bu avantajlar sayesinde dijital içerikleriniz daha etkileyici ve verimli hale gelir.</li></ul><h3>🛠️ Hizmet Sürecimiz</h3><p><strong>1. Konsept ve Analiz:</strong> Projenizin kapsamı değerlendirilir, hedefler belirlenir.</p><p> <strong>2. Modelleme:</strong> Ürün veya sahnenin 3D modellemesi yapılır.</p><p> <strong>3. Detay ve Doku Çalışması:</strong> Gerçekçi görünüm için detay ve yüzey dokuları eklenir.</p><p> <strong>4. Render &amp; Sunum:</strong> Model, yüksek kaliteli görseller veya animasyonlar için render edilir.</p><p> <strong>5. Teslim ve Entegrasyon:</strong> Sonuçlar web, grafik veya video projelerine uygun formatta teslim edilir.</p><h3>📈 Sonuç</h3><p>Profesyonel 3D modelleme hizmeti; markanızın dijital hikâyesini daha çarpıcı, etkileşimli ve görsel olarak etkili şekilde anlatmanızı sağlar. Ürün veya proje sunumlarınız ne kadar kaliteli olursa, hedef kitleniz üzerinde bırakacağınız etki o kadar güçlü olur. 3D modelleme ile dijital içeriğinizi bir üst seviyeye taşıyın!</p>
+</main>
+</div>
+
+
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+    .then(r => {
+      if (!r.ok) throw new Error('footer.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
