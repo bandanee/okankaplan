@@ -12,7 +12,25 @@
   <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
+<script>
+    // head.html içeriğini fetch ile yükle
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/head.html')
+      .then(response => {
+        if (!response.ok) throw new Error('head.html yüklenemedi');
+        return response.text();
+      })
+      .then(html => {
+        // Create a temporary container to parse the HTML
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
 
+        // Her bir child'ı head içine ekle
+        while (temp.firstChild) {
+          document.head.appendChild(temp.firstChild);
+        }
+      })
+      .catch(error => console.error('Fetch hatası:', error));
+  </script>
 </head>
 <body>
 
