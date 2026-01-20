@@ -3,12 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fetch ile Offcanvas</title>
+<title>Modern Web Sayfa – Okan Kaplan</title>
+<meta name="description" content="Okan Kaplan – Modern, responsive ve SEO uyumlu web sayfa tasarımı. Sol ve sağ offcanvas menüler, iletişim formu ve sosyal linkler ile tam entegre.">
+<meta name="keywords" content="Okan Kaplan, web tasarım, responsive, offcanvas, SEO, Bootstrap 5, modern tasarım">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.example.com/modern-web-sayfa.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Modern Web Sayfa – Okan Kaplan">
+<meta property="og:description" content="Okan Kaplan – Modern, responsive ve SEO uyumlu web sayfa tasarımı.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.example.com/modern-web-sayfa.html">
+<meta property="og:image" content="https://www.example.com/thumbnail.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modern Web Sayfa – Okan Kaplan">
+<meta name="twitter:description" content="Okan Kaplan – Modern, responsive ve SEO uyumlu web sayfa tasarımı.">
+<meta name="twitter:image" content="https://www.example.com/thumbnail.jpg">
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Montserrat Font -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- FontAwesome -->
@@ -17,40 +34,106 @@
 <!-- Özel CSS -->
 <link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
+<style>
+body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
+main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
+footer a { color:#ffc107; text-decoration:none;}
+footer a:hover { text-decoration:underline;}
+#offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
+#offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
+</style>
 </head>
 <body>
 
-<!-- Nav + Offcanvas placeholder -->
-<div id="navbar-placeholder"></div>
+<!-- Sol üst toggle -->
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+  &#9776;
+</button> 
 
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<!-- Sağ üst toggle -->
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+  <i class="fas fa-comment-dots"></i>
+</button>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logo</a>
+  </div>
+</nav>
+
+<!-- Sol Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Kategoriler</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="#section1">Bölüm 1</a></li>
+      <li class="nav-item"><a class="nav-link" href="#section2">Bölüm 2</a></li>
+      <li class="nav-item"><a class="nav-link" href="#section3">Bölüm 3</a></li>
+      <li class="nav-item"><a class="nav-link" href="#section4">Bölüm 4</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">İletişim</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p><strong>İsim:</strong> Okan Kaplan</p>
+    <!-- Form -->
+    <form>
+      <div class="mb-3">
+        <label for="nameInput" class="form-label">İsim</label>
+        <input type="text" class="form-control" id="nameInput" placeholder="Adınızı girin">
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label">Mesaj</label>
+        <textarea class="form-control" id="messageInput" rows="3" placeholder="Mesajınızı yazın"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Gönder</button>
+    </form>
+    <a href="https://wa.me/905362279390" target="_blank" class="btn btn-success w-100 mt-3">WhatsApp ile Mesaj Gönder</a>
+    <!-- Sosyal linkler -->
+    <div class="mt-4">
+      <h6>Sosyal ve Platformlar</h6>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="https://www.youtube.com/@Ki%C5%9FiselGeli%C5%9Fim-Video-Pdf-img" target="_blank" class="text-danger"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://www.udemy.com/user/okan-kaplan-7" target="_blank" class="text-dark"><i class="fas fa-graduation-cap fa-lg"></i></a>
+        <a href="https://shopier.com/banddes" target="_blank" class="text-success"><i class="fas fa-store fa-lg"></i></a>
+        <a href="https://linkedin.com/in/canvasor" target="_blank" class="text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://kisisel-gelisim-video-pdfders-imgpack.blogspot.com" target="_blank" class="text-warning"><i class="fab fa-blogger fa-lg"></i></a>
+        <a href="https://www.etsy.com/shop/bandanee" target="_blank" class="text-info"><i class="fab fa-etsy fa-lg"></i></a>
+        <a href="https://dev.to/okan_kaplan_livehtml" target="_blank" class="text-dark"><i class="fab fa-dev fa-lg"></i></a>
+        <a href="https://sketchfab.com/canvasor" target="_blank" class="text-secondary"><i class="fas fa-cube fa-lg"></i></a>
+        <a href="https://codepen.io/livehtml" target="_blank" class="text-black"><i class="fab fa-codepen fa-lg"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Main içerik -->
 <div class="container my-4">
   <main class="col-12 col-lg-9 mx-auto">
-    <section id="section1"><h2>Bölüm 1</h2><p>Sol ve sağ offcanvas nav.html içinde yer alıyor.</p></section>
-    <section id="section2"><h2>Bölüm 2</h2><p>Responsive tasarım, modern ve sade layout.</p></section>
-    <section id="section3"><h2>Bölüm 3</h2><p>Toggle butonlar nav.html içinden çalışıyor.</p></section>
-    <section id="section4"><h2>Bölüm 4</h2><p>Footer modern ve sade, sayfa sonunda yer alıyor.</p></section>
+    <section id="section1"><h2>Bölüm 1</h2><p>Sol ve sağ offcanvas menülerle modern layout.</p></section>
+    <section id="section2"><h2>Bölüm 2</h2><p>Responsive, sade ve SEO uyumlu.</p></section>
+    <section id="section3"><h2>Bölüm 3</h2><p>Toggle butonlar üstte, kolay erişim.</p></section>
+    <section id="section4"><h2>Bölüm 4</h2><p>Footer sayfa sonunda, modern tasarım.</p></section>
   </main>
 </div>
 
-<!-- Footer placeholder -->
-<div id="footer-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => r.text())
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error('footer.html yüklenemedi', e));
-</script>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Okan Kaplan. | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
+  </div>
+</footer>
 
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
