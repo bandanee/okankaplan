@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Geliştirme Hizmeti — Kodlama, Dinamik Site & Teknoloji Çözümleri | Okan Kaplan</title>
+<meta name="description" content="Profesyonel web geliştirme hizmeti: dinamik web uygulamaları, modern frontend & backend çözümleri, hızlı yüklenen yapılar ve güvenli teknoloji entegrasyonları ile dijital projelerinizi hayata geçirin.">
+<meta name="keywords" content="web geliştirme, frontend geliştirme, backend geliştirme, dinamik web uygulaması, JavaScript, HTML CSS, PHP, API entegrasyonu, performans optimizasyonu, Okan Kaplan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bandanee.github.io/okankaplan/web/gelistirme/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Web Geliştirme Hizmeti — Kodlama, Dinamik Site & Teknoloji Çözümleri | Okan Kaplan">
+<meta property="og:description" content="Profesyonel web geliştirme hizmeti: dinamik web uygulamaları, modern frontend & backend çözümleri, hızlı yüklenen yapılar ve güvenli teknoloji entegrasyonları ile dijital projelerinizi hayata geçirin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bandanee.github.io/okankaplan/web/gelistirme/">
+<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/web-gelistirme-thumbnail.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Web Geliştirme Hizmeti — Kodlama, Dinamik Site & Teknoloji Çözümleri | Okan Kaplan">
+<meta name="twitter:description" content="Profesyonel web geliştirme hizmeti: dinamik web uygulamaları, modern frontend & backend çözümleri, hızlı yüklenen yapılar ve güvenli teknoloji entegrasyonları ile dijital projelerinizi hayata geçirin.">
+<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/web-gelistirme-thumbnail.jpg">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<!-- Özel CSS -->
+<style>
+body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
+main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
+footer a { color:#ffc107; text-decoration:none;}
+footer a:hover { text-decoration:underline;}
+#offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
+#offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
+  .offcanvas {
+  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
+}
+</style>
+<script>
+fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
+  .then(r => r.text())
+  .then(t => document.head.insertAdjacentHTML("beforeend", t))
+  .catch(e => console.error("ek_head yüklenemedi", e));
+</script>
+</head>
+<body>
+
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
+
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+  </div>
+</nav>
+
+<!-- Sol Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div id="toc-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<!-- Main içerik -->
+<div class="container my-4">
+<main class="col-12 col-lg-9 mx-auto">
+<h3>Web Geliştirme ile Dijital Projelerinizi Güçlendirin</h3><p>Dijital dünyada sadece güzel görünen bir tasarım yeterli değildir; aynı zamanda <strong>fonksiyonel, güvenli, hızlı ve sürdürülebilir</strong> bir teknoloji altyapısı da gerekir. Okan Kaplan’ın sunduğu <strong>web geliştirme hizmeti</strong>, modern web projelerini baştan sona teknik anlamda ele alır ve her şeyin sorunsuz çalıştığından emin olur.</p><p>Web geliştirme, yalnızca kod yazmaktan ibaret değildir. Doğru teknoloji seçimi, kullanıcı etkileşimi, veri yönetimi, güvenlik ve performans optimizasyonu gibi unsurların birlikte planlandığı kapsamlı bir süreçtir. Bu yaklaşım sayesinde ziyaretçiler hızla etkileşime geçer; site daha yüksek performans ve güvenilirlik sunar.</p><p><br></p><h3>Frontend Geliştirme — Kullanıcı Arayüzüne Can Verme</h3><p>Frontend, kullanıcıların doğrudan etkileşime geçtiği kısımdır. HTML, CSS ve JavaScript gibi modern teknolojilerle hazırlanan arayüzler, görsel tasarımı fonksiyonel hâle getirir. Frontend geliştirme ile:</p><ul><li>Tutarlı ve hızlı kullanıcı arayüzleri</li><li>Tüm cihazlarda uyumlu (responsive) deneyim</li><li>Etkileşimli sayfa öğeleri</li><li>Animasyonlar ve mikro etkileşimler</li></ul><p>gibi özellikler web sitenizi ziyaretçiler için daha çekici ve etkileyici hâle getirir.</p><p><br></p><h3>Backend Geliştirme — Veri, İş Mantığı ve Sunucu</h3><p>Backend, sitenin “arka plan” yetenekleridir. Sunucu tarafında çalışan kodlar, veritabanı yönetimi, kullanıcı kimlik doğrulama, API bağlantıları ve iş mantığı gibi bölümler backend geliştirme ile oluşturulur. Bu sayede:</p><ul><li>Dinamik içerik yönetimi</li><li>Form ve kullanıcı etkileşimleri</li><li>Veritabanı bağlantıları</li><li>API entegrasyonları</li></ul><p>gibi fonksiyonlar çalışır. Backend geliştirme, sitenin sadece görüntüden ibaret olmayan, <strong>etkileşimli ve veri odaklı</strong> bir yapıya dönüşmesini sağlar.</p><p><br></p><h3>Performans &amp; Güvenlik Odaklı Kodlama</h3><p>Web geliştirme sürecinde sadece “çalışan kod” yeterli değildir; aynı zamanda <strong>hızlı yüklenen, optimizasyonlu ve güvenli</strong> olması gerekir. Bu doğrultuda:</p><ul><li>Kod optimizasyonu</li><li>Sunucu önbellekleme</li><li>Güvenlik duvarı (firewall) önlemleri</li><li>HTTPS ve güncel protokoller</li><li>Veri güvenliği</li></ul><p>gibi teknik yapılar projenizde standart olarak uygulanır. Bu sayede site ziyaretçileri yüksek performansla karşılaşır ve potansiyel tehditlere karşı korunur.</p><p><br></p><h3>API Entegrasyonları ve Üçüncü Parti Hizmetler</h3><p>Modern web projeleri genellikle başka hizmetlerle bağlantı kurulmasını gerektirir. Bu bağlantılar API entegrasyonları ile sağlanır. Örneğin:</p><ul><li>Ödeme altyapı bağlantıları</li><li>CRM &amp; e‑posta servisleri</li><li>Sosyal medya veya harita entegrasyonları</li><li>Üçüncü parti analytics ve raporlama</li></ul><p>gibi servisler backend üzerinden sorunsuz şekilde bağlanır ve yönetilir.</p><p><br></p><h3>Sürekli Destek, Geliştirme &amp; Bakım</h3><p>Web geliştirme süreci sadece yayına almakla bitmez. Site canlıya alındıktan sonra da;</p><ul><li>Periyodik güncellemeler</li><li>Performans optimizasyonu</li><li>Güvenlik yamaları</li><li>Yeni özellik geliştirme</li></ul><p>gibi destekler sağlanır. Böylece web projeniz her zaman güncel ve fonksiyonel kalır.</p><p><br></p><h3>Sonuç</h3><p>Profesyonel web geliştirme hizmeti, dijital projeleri sadece görsel olarak değil, <strong>teknolojik anlamda da güçlü</strong> kılar. Modern frontend &amp; backend çözümleri, performans ve güvenlik odaklı yapılar ile web siteniz kullanıcılar için hem hızlı hem güvenilir bir deneyim sunar. Okan Kaplan olarak dijital hedeflerinize ulaşmanız için teknik altyapıdan kullanıcı deneyimine kadar her adımda yanınızdayız.</p>
+</main>
+</div>
+
+
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+    .then(r => {
+      if (!r.ok) throw new Error('footer.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
