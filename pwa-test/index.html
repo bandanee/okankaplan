@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benim İlk Uygulamam</title>
+</head>
+<body>
+
+  <h1>👋 Merhaba</h1>
+  <p>Bu benim ilk mini uygulamam.</p>
+
+  <input type="number" id="sayi" placeholder="Bir sayı gir">
+  <br><br>
+  <button onclick="hesapla()">2 ile Çarp</button>
+
+  <p id="sonuc"></p>
+
+  <script>
+    function hesapla() {
+      var s = document.getElementById("sayi").value;
+      document.getElementById("sonuc").innerText = "Sonuç: " + (s * 2);
+    }
+  </script>
+
+</body>
+</html>
