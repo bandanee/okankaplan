@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Animasyon & Hareketli Grafik Hizmeti — Görsel Etki & Yaratıcı Çözümler | Okan Kaplan</title>
+<meta name="description" content="3D animasyon hizmeti ile tanıtım videoları, ürün görselleştirme, hareketli grafikler ve interaktif sahneler üretin. Marka hikâyenizi güçlü, akılda kalıcı ve etkileyici görsel deneyimlerle anlatın.">
+<meta name="keywords" content="3D animasyon, hareketli grafik, animasyon tasarımı, görsel efekt, ürün animasyonu, tanıtım video animasyonu, interaktif 3D, render animasyon, dijital medya">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bandanee.github.io/okankaplan/3d/animasyon/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="3D Animasyon & Hareketli Grafik Hizmeti — Görsel Etki & Yaratıcı Çözümler | Okan Kaplan">
+<meta property="og:description" content="3D animasyon hizmeti ile tanıtım videoları, ürün görselleştirme, hareketli grafikler ve interaktif sahneler üretin. Marka hikâyenizi güçlü, akılda kalıcı ve etkileyici görsel deneyimlerle anlatın.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bandanee.github.io/okankaplan/3d/animasyon/">
+<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/3d-animasyon-thumbnail.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="3D Animasyon & Hareketli Grafik Hizmeti — Görsel Etki & Yaratıcı Çözümler | Okan Kaplan">
+<meta name="twitter:description" content="3D animasyon hizmeti ile tanıtım videoları, ürün görselleştirme, hareketli grafikler ve interaktif sahneler üretin. Marka hikâyenizi güçlü, akılda kalıcı ve etkileyici görsel deneyimlerle anlatın.">
+<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/3d-animasyon-thumbnail.jpg">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<!-- Özel CSS -->
+<style>
+body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
+main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
+footer a { color:#ffc107; text-decoration:none;}
+footer a:hover { text-decoration:underline;}
+#offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
+#offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
+  .offcanvas {
+  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
+}
+</style>
+<script>
+fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
+  .then(r => r.text())
+  .then(t => document.head.insertAdjacentHTML("beforeend", t))
+  .catch(e => console.error("ek_head yüklenemedi", e));
+</script>
+</head>
+<body>
+
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
+
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+  </div>
+</nav>
+
+<!-- Sol Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div id="toc-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+    .then(r => {
+      if (!r.ok) throw new Error('nav.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+</div>
+
+<!-- Main içerik -->
+<div class="container my-4">
+<main class="col-12 col-lg-9 mx-auto">
+<h3>🎬 3D Animasyon Hizmeti — Görsel Hikâye Anlatımında Fark Yaratın</h3><p>Dijital çağda, görsel içerikler artık sadece görsel değil aynı zamanda <strong>etki yaratan, anlatımı güçlendiren ve kullanıcı etkileşimini artıran</strong> araçlar olarak kabul ediliyor. 3D animasyon, bu alanda markaların hikâyelerini çarpıcı, dinamik ve akılda kalıcı bir şekilde anlatmalarına olanak tanır. Okan Kaplan’ın sunduğu <strong>3D animasyon hizmeti</strong>, tanıtım videolarından ürün görselleştirmelerine, interaktif sahne yaratımından hareketli grafiklere kadar geniş bir uygulama alanını kapsar.</p><p><br></p><h3>🚀 Neden 3D Animasyon Kullanmalısınız?</h3><p><strong>Dikkat Çekicilik:</strong></p><p> 3D animasyonlar, düz statik görsellerin ötesine geçerek ziyaretçilerin dikkatini çok daha güçlü biçimde çeker. Hareket ve derinlik, kullanıcıda merak uyandırır ve içeriğe odaklanmayı artırır.</p><p><strong>Hikâye Anlatımı:</strong></p><p> Animasyon, karmaşık fikirleri bile sade ve etkileyici bir şekilde anlatabilir. Marka hikâyeleri, ürün özellikleri ve hizmet avantajları animasyon ile görsel olarak netleşir.</p><p><strong>Profesyonel İzlenim:</strong></p><p> Marka imajını güçlendiren kaliteli animasyonlar, dijital mecralarda profesyonellik algısını yükseltir.</p><h3>🧩 Animasyonun Uygulama Alanları</h3><h4>📌 Tanıtım Videoları</h4><p>Ürün ya da hizmet tanıtımlarında 3D animasyonlar, izleyicinin ilgisini çeker ve mesajın net şekilde aktarılmasını sağlar. Reklam kampanyaları, sosyal medya tanıtımları veya web ana sayfa videoları için ideal çözüm sunar.</p><h4>📦 Ürün Animasyonu</h4><p>Gerçekçi 3D modellemeler hareketlendirilerek ürünün tüm özellikleri adım adım gösterilebilir. Böylece potansiyel müşteriler ürünün kullanım şekillerini ve avantajlarını daha iyi kavrar.</p><h4>📊 Hareketli Grafikler &amp; Infografikler</h4><p>Veri odaklı anlatımları daha akıcı ve anlaşılır hâle getirmek için animasyonlu grafikler kullanılabilir. Eğitim videoları, rapor sunumları ve marka içerikleri için etkili çözümler sunar.</p><h4>🌐 Interaktif Sahne Animasyonları</h4><p>Web siteniz veya dijital portföyleriniz için etkileşimli 3D sahneler üretebilir; kullanıcıların merakını uyandıran ve sayfada kalma süresini artıran özel deneyimler oluşturabilirsiniz.</p><p><br></p><h3>🛠️ Animasyon Sürecimiz</h3><p><strong>1. Ön Tasarım ve Konsept:</strong></p><p> Projenin hedefleri ve ihtiyaçları belirlenir.</p><p><strong>2. 3D Modelleme:</strong></p><p> Animasyon için gerekli nesneler, karakterler veya sahneler yüksek detaylı modelleme ile hazırlanır.</p><p><strong>3. Rigging &amp; Animasyon:</strong></p><p> Modellemeler, iskelet yapılarıyla animasyon için hazırlanır ve hareketlendirilir.</p><p><strong>4. Render &amp; Görselleştirme:</strong></p><p> Hazırlanan animasyon, kaliteli render ile görsel açıdan zengin hale getirilir.</p><p><strong>5. Teslim &amp; Optimizasyon:</strong></p><p> Son içerikler, dijital platformlara uygun formatlarda teslim edilir ve gerekirse medya platformları için optimize edilir.</p><h3>📈 3D Animasyonun Faydaları</h3><ul><li><strong>Etkileşim ve dikkat çekicilik artar</strong></li><li><strong>Mesajlar daha hızlı anlaşılır</strong></li><li><strong>Marka algısı güçlenir</strong></li><li><strong>Profesyonel ve modern görünüm sağlar</strong></li><li><strong>Çeşitli platformlarda kullanılabilir (web, sosyal medya, tanıtım ekranları)</strong></li></ul><p>3D animasyon, sıradan içeriğin ötesine geçer; markanıza <strong>dijital donanım ve profesyonel derinlik</strong> kazandırır.</p><p><br></p><h3>🎯 Sonuç</h3><p>3D animasyon hizmeti, dijital içerik stratejinizin en güçlü parçalarından biri olabilir. Görsel hikâye anlatımını zenginleştiren, marka ile hedef kitle arasındaki bağı güçlendiren ve kullanıcı etkileşimini yükselten animasyonlar ile projelerinizi bir üst seviyeye taşıyın. Okan Kaplan olarak bu süreçte profesyonel, yaratıcı ve çözüm odaklı hizmetler sunuyoruz.</p>
+</main>
+</div>
+
+
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+    .then(r => {
+      if (!r.ok) throw new Error('footer.html yüklenemedi');
+      return r.text();
+    })
+    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+    .catch(e => console.error(e));
+</script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
