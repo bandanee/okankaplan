@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>3D Tasarım & Modelleme Hizmetleri — 3D Web, Animasyon & Görselleştirme | Okan Kaplan</title>
-<meta name="description" content="Okan Kaplan’ın 3D tasarım ve modelleme hizmetleri: 3 boyutlu görseller, animasyonlar, ürün ve UI/UX 3D sahneler, web ve medya içerikleri ile markanızı geleceğe taşıyın.">
-<meta name="keywords" content="3D tasarım, 3D modelleme, 3D animasyon, 3D görselleştirme, 3D web tasarım, ürün modelleme, UI/UX 3D entegre, görsel efekt, dijital sahne, artırılmış gerçeklik">
+
+<title>DailyMind – 3D & Üç Boyutlu Web</title>
+<meta name="description" content="Web’de 3D, üç boyutlu web tasarım ve interaktif 3D içerikler: WebGL, Three.js ve 3D etkileşimli deneyimlerle modern dijital tasarım.">
+<meta name="keywords" content="3D web, 3D tasarım, WebGL, Three.js, etkileşimli web, 3D modeller, dijital deneyim">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/3d/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="3D Tasarım & Modelleme Hizmetleri — 3D Web, Animasyon & Görselleştirme | Okan Kaplan">
-<meta property="og:description" content="Okan Kaplan’ın 3D tasarım ve modelleme hizmetleri: 3 boyutlu görseller, animasyonlar, ürün ve UI/UX 3D sahneler, web ve medya içerikleri ile markanızı geleceğe taşıyın.">
+<meta property="og:title" content="DailyMind – 3D & Üç Boyutlu Web">
+<meta property="og:description" content="Web’de 3D içerikler, modern 3D web tasarım teknikleri ve 3D deneyimlerle etkileşimli web projeleri hakkında kapsamlı bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/3d/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/3d-services-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="3D Tasarım & Modelleme Hizmetleri — 3D Web, Animasyon & Görselleştirme | Okan Kaplan">
-<meta name="twitter:description" content="Okan Kaplan’ın 3D tasarım ve modelleme hizmetleri: 3 boyutlu görseller, animasyonlar, ürün ve UI/UX 3D sahneler, web ve medya içerikleri ile markanızı geleceğe taşıyın.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/3d-services-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – 3D & Üç Boyutlu Web">
+<meta name="twitter:description" content="Web’de 3D içerikler, modern 3D web tasarım teknikleri ve 3D deneyimlerle etkileşimli web projeleri hakkında kapsamlı bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -50,64 +56,110 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 </head>
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('toc-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<p>3 boyutlu tasarım, günümüz dijital dünyasında dikkat çekici ve etkileyici görsel içerikler oluşturmanın en etkili yollarından biridir. 3D hizmetlerimiz, yalnızca statik görseller değil; interaktif, etkileşimli ve kullanıcıya farklı bir deneyim sunan <strong>3D modelleme, animasyon ve görselleştirme çözümleri</strong> ile markanızı hem dijital hem de fiziksel dünyada öne çıkarmanıza yardımcı olur.</p><p>3D içerikler yalnızca görselliği artırmaz, aynı zamanda mesajınızı daha etkili bir şekilde anlatır ve ziyaretçilerinizin dikkatini uzun süre tutar — bu da dönüşüm ve etkileşim oranlarını artırır. </p><p><br></p><h3>Neden 3D Tasarım?</h3><p>3D tasarım günümüzde birçok alanda kullanılmaktadır:</p><ul><li><strong>Web ve UI/UX projeleri:</strong> 3D görseller ve sahneler, web sayfalarınızın daha modern ve etkileşimli görünmesini sağlar. </li><li><strong>Ürün modelleme:</strong> Ürünlerinizi üç boyutlu görsel olarak sunarak müşteri güvenini artırabilirsiniz. </li><li><strong>Animasyon ve görsel efektler:</strong> Tanıtım videoları, reklam kampanyaları ve sunumlar için 3D animasyonlar etkileyici içerikler üretir. </li><li><strong>Marka deneyimi:</strong> Etkileşimli 3D alanlar, ziyaretçinin sitenizde kalma süresini arttırır ve marka algısını güçlendirir. </li></ul><p>3D içerikler, interaktif deneyimler ve modern görseller ile ziyaretçiler üzerinde “fark yaratan” bir ilk izlenim oluşturur. </p><p><br></p><h3>Hizmetlerimiz</h3><h4>🎨 3D Modelleme</h4><p>3D modelleme hizmetimiz ile ürünleriniz, mimari projeleriniz veya konsept tasarımlarınız <strong>yüksek detaylı ve gerçekçi modeller</strong> hâline gelir. Bu modeller, web, reklam, sanal ortamlar veya e‑ticaret gibi çeşitli platformlarda kullanılabilir. </p><h4>🔄 Animasyon &amp; Hareketli Grafikler</h4><p>Markanızın hikâyesini anlatmak için 3D animasyonlar üretiriz. Bu animasyonlar, dinamik sunumlar, tanıtım videoları ve etkileşimli içerikler için güçlü bir araçtır. </p><h4>🌐 3D Web ve UI/UX Entegrasyon</h4><p>Sitenize 3D sahneler, animasyonlar veya interaktif modeller entegre edilerek ziyaretçi deneyimi zenginleştirilir. 3D öğeler, özellikle ürün tanıtım sayfalarında veya kreatif portföylerde güçlü bir etki yaratır. </p><h4>📸 Görselleştirme ve Render</h4><p>Ürün, mekan veya tasarım görselleştirmeleri ile projeleriniz <strong>gerçekçi ve profesyonel görseller</strong> ile sunulur. Bu hizmet, özellikle mimari projeler veya sanal sunumlar için idealdir. </p><p><br></p><h3>3D Tasarımın Avantajları</h3><ul><li><strong>Etkileşim arttırır:</strong> Ziyaretçilerin sayfada kalma süresini yükseltir. </li><li><strong>Marka imajını güçlendirir:</strong> Modern ve yenilikçi deneyim sunar. </li><li><strong>Farklı platformlarda kullanım:</strong> Web, video, sunum veya VR/AR ortamlarında kullanılabilir. </li><li><strong>Yüksek dönüşüm potansiyeli:</strong> Ürün görselleri ve etkileşimli sahneler satışa ve kullanıcı kararına olumlu katkı sağlar. </li></ul><h3>Sonuç</h3><p>3D tasarım hizmetlerimiz, sizi rakiplerinizden ayıran <strong>görsel kalite, teknoloji ve etkileşim odaklı içerik</strong> üretimine odaklanır. 3 boyutlu modelleme, animasyon ve web entegrasyonu ile dijital varlığınızı en üst seviyeye taşıyın. Okan Kaplan olarak, projelerinizi 3D dünyasında güçlü bir şekilde ifade etmenize destek oluyoruz.</p>
+
+<h3><strong>Web’de 3D – Üç Boyutlu İçerikler ve Deneyimler</strong></h3>
+
+<p>Web’de 3D içerikler, geleneksel iki boyutlu (2D) tasarımların ötesinde, kullanıcıya derinlik ve etkileşim sunan üç boyutlu grafiklerdir. Bu tür içerikler, web sitelerinde ürün görselleştirme, animasyonlu sahneler, interaktif deneyimler ve eğitim, oyun veya simülasyon uygulamalarında kullanılabilir. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>3D Web Tasarımı Nedir?</h4>
+<p>3D web tasarımı, web sayfalarında interaktif 3D öğeler, animasyonlar ve modeller kullanarak ziyaretçi deneyimini zenginleştiren bir yaklaşımdır. Modern 3D web projeleri, WebGL ve Three.js gibi teknolojiler sayesinde tarayıcıda eklenti gerektirmeden yüksek performanslı 3D grafikler sunar. :contentReference[oaicite:2]{index=2}</p>
+
+<h4>Kullanım Alanları</h4>
+<ul>
+  <li><strong>Ürün Görselleştirme:</strong> E‑ticaret sitelerinde ürünün üç boyutlu modelini göstermek, kullanıcıların ayrıntıları keşfetmesini sağlar. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>Eğitim ve Simülasyon:</strong> 3D sahneler, öğrencilere ve kullanıcılara etkileşimli öğrenme deneyimleri sunabilir. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Oyun ve Sanal Deneyimler:</strong> WebGL tabanlı 3D oyunlar ve sanal ortamlar tarayıcıda çalışabilir. :contentReference[oaicite:5]{index=5}</li>
+  <li><strong>Animasyon ve Mimari:</strong> Mimari modellerin veya animasyonlu sahnelerin web üzerinden sunumu. :contentReference[oaicite:6]{index=6}</li>
+</ul>
+
+<h4>3D Web Teknolojileri</h4>
+<p>Web’de 3D grafikler oluşturmak için en yaygın teknoloji **WebGL (Web Graphics Library)**’dir. WebGL, tarayıcıda eklenti gerektirmeden donanım hızlandırmalı 3D grafikler sağlar. Üçüncü taraf kütüphaneler (örneğin Three.js) bu teknolojinin üzerine interaktif sahneler ve modeller oluşturmayı kolaylaştırır. :contentReference[oaicite:7]{index=7}</p>
+
+<h4>Avantajlar ve Zorluklar</h4>
+<ul>
+  <li><strong>Etkileşim ve Deneyim:</strong> 3D öğeler kullanıcı etkileşimini artırarak deneyimi zenginleştirir. :contentReference[oaicite:8]{index=8}</li>
+  <li><strong>Teknik Gereksinimler:</strong> 3D grafikler daha fazla kaynak kullanabilir; optimize edilmezse performans sorunları yaşanabilir. :contentReference[oaicite:9]{index=9}</li>
+  <li><strong>Uyumluluk:</strong> Tüm cihazlar ve tarayıcılar aynı performansı veremeyebilir; bu nedenle performans ve erişilebilirlik göz önünde tutulmalıdır. :contentReference[oaicite:10]{index=10}</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4">
+  <div id="calendar"></div>
+</div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView:'dayGridMonth',
+        locale:'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
