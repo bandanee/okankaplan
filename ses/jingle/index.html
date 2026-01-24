@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reklam Jingle & Marka Müzik Üretimi — Sesli Marka Kimliği | Okan Kaplan</title>
-<meta name="description" content="Profesyonel jingle üretimi ve reklam müzikleri ile markanızın sesli kimliğini güçlendirin. Özgün, akılda kalıcı melodiler, vokal prodüksiyon ve kampanyaya özel ses çözümleri.">
-<meta name="keywords" content="jingle üretimi, reklam jingle, marka müziği, ses tasarımı, vokal jingle, dijital reklam sesi, sesli kimlik, ses prodüksiyon, müzik prodüksiyon, Okan Kaplan">
+
+<title>DailyMind – Jingle (Reklam Müziği)</title>
+<meta name="description" content="Jingle nedir? Reklam müziği ve sesli marka kimliği nasıl oluşturulur? Podcast, reklâm ve dijital medya için akılda kalıcı ses tasarımı hakkında bilgi.">
+<meta name="keywords" content="jingle, reklam müziği, sesli marka kimliği, audio branding, podcast müzikleri, ses tasarımı">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/ses/jingle/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Reklam Jingle & Marka Müzik Üretimi — Sesli Marka Kimliği | Okan Kaplan">
-<meta property="og:description" content="Profesyonel jingle üretimi ve reklam müzikleri ile markanızın sesli kimliğini güçlendirin. Özgün, akılda kalıcı melodiler, vokal prodüksiyon ve kampanyaya özel ses çözümleri.">
+<meta property="og:title" content="DailyMind – Jingle (Reklam Müziği)">
+<meta property="og:description" content="Akılda kalıcı jingles ile reklam, podcast ve marka kimliğinde ses tasarımını öğrenin. Kısa müzik parçalarının marka mesajını güçlendirme yolları.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/ses/jingle/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/jingle-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Reklam Jingle & Marka Müzik Üretimi — Sesli Marka Kimliği | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel jingle üretimi ve reklam müzikleri ile markanızın sesli kimliğini güçlendirin. Özgün, akılda kalıcı melodiler, vokal prodüksiyon ve kampanyaya özel ses çözümleri.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/jingle-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Jingle (Reklam Müziği)">
+<meta name="twitter:description" content="Akılda kalıcı jingles ile reklam, podcast ve marka kimliğinde ses tasarımını öğrenin. Kısa müzik parçalarının marka mesajını güçlendirme yolları.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -48,66 +54,109 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .catch(e => console.error("ek_head yüklenemedi", e));
 </script>
 </head>
+
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>🎶 Jingle Üretimi — Markanızın Sesli Kimliğini Oluşturun</h3><p>Reklam dünyasında <strong>jingle</strong>, kısa, akılda kalıcı melodiler ve ritimler yoluyla markaların hedef kitleye mesajını hızlı ve etkili biçimde ileten sesli reklam ögesidir. Jingle’lar, basit melodilerle dahi markanızın hafızada yer etmesine yardımcı olur ve tanıtım kampanyalarında güçlü bir <em>sesli imza</em> görevini üstlenir. </p><p>Kaliteli bir jingle; doğru ritim, akılda kalıcı melodi ve marka mesajını net ileten sözler ile bir araya gelerek dinleyicide marka ile bağ kurma duygusunu güçlendirir. Bu nedenle jingle üretimi, sadece müzik yapmak değil, aynı zamanda <strong>marka kimliğini sesle kodlama sürecidir</strong>. </p><p><br></p><h3>📣 Jingle’ın Markanıza Faydaları</h3><p><strong>Akılda Kalıcılık:</strong></p><p> Kısa, etkili bir melodik motif, dinleyicinin markanızı hemen hatırlamasına yardımcı olur. </p><p><strong>Duygusal Bağ:</strong></p><p> Müzik, duyguları tetikler ve mesajınızı hem bilinçli hem duygusal düzeyde iletişimsel hâle getirir. </p><p><strong>Çoklu Medya Kullanımı:</strong></p><p> Jingle’lar, TV reklamlarında, radyo spotlarında, sosyal medya kampanyalarında ve web reklamlarında kullanılabilir. </p><h3>🎤 Jingle Üretim Sürecimiz</h3><p><strong>Araştırma &amp; Konsept Geliştirme:</strong></p><p> Markanızın hedef kitlesi, değerleri ve kampanya hedefleri analiz edilir.</p><p><strong>Söz Yazımı &amp; Beste:</strong></p><p> Kısa, net ve akılda kalıcı sözler ile kolay hatırlanabilir bir melodi oluşturulur. </p><p><strong>Vokal &amp; Prodüksiyon:</strong></p><p> Profesyonel vokal kayıtları, miksaj ve mastering ile jingle son hâline getirilir. </p><p><strong>Versiyonlama:</strong></p><p> Çeşitli uzunluklarda (örneğin 5–30 saniye) ve formatlarda versiyonlar hazırlanır. </p><h3>🎧 Jingle Kullanım Alanları</h3><p><strong>Reklam Kampanyaları:</strong></p><p> Marka veya ürün tanıtımlarında medyaya özgü jingle kullanılabilir. </p><p><strong>Radyo/TV Spotları:</strong></p><p> Radyo ve televizyon reklamlarında dinleyicinin dikkatini çekmek için idealdir. </p><p><strong>Sosyal Medya &amp; Dijital Reklamlar:</strong></p><p> Sosyal ağlarda kısa ve akılda kalıcı kampanya müzikleri ile etkileşim artırılır. </p><p><strong>Marka Kimliği:</strong></p><p> Ses, marka kimliğinin güçlü bir bileşeni olabilir; görsel tasarım kadar önemlidir. </p><h3>📈 Neden Profesyonel Jingle?</h3><p>Markanızın dijital veya geleneksel medya kampanyaları ne olursa olsun, profesyonelce hazırlanmış bir jingle, <strong>dinleyicide marka bağlantısı ve hatırlanma oranını ciddi şekilde artırır</strong>. Jingle; marka mesajını kısa sürede etkili, akılda kalıcı ve keyifli bir ses deneyimine dönüştürür.&nbsp;</p>
+
+<h3><strong>Jingle (Reklam Müziği)</strong></h3>
+
+<p><strong>Jingle</strong>, reklamcılık ve sesli marka kimliği çalışmalarında kullanılan kısa, akılda kalıcı müzik parçası veya melodidir. Genellikle ürün, hizmet veya marka mesajını hızla tanıtmak için oluşturulur ve dinleyicinin zihninde kolayca kalacak şekilde tasarlanır. :contentReference[oaicite:0]{index=0}</p>
+
+<p>Bu kısa müzik parçaları genelde sadece birkaç saniyeden oluşur ve çoğu zaman marka adı, slogan veya tanıtım mesajını içeren sözler veya ritimlerle birlikte gelir; böylece tüketicinin marka ile bağlantı kurması kolaylaşır. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Jingle’ın Özellikleri</h4>
+<ul>
+  <li><strong>Kısa ve Akılda Kalıcı:</strong> Tipik bir jingle yalnızca 5–30 saniye sürer ve dinleyicide hemen yer edinmesi amaçlanır. :contentReference[oaicite:2]{index=2}</li>
+  <li><strong>Marka ile Bağlantı:</strong> Melodi ve mesaj genellikle marka kimliği ile eşleştirilir ve dinlendiğinde otomatik olarak o markayı çağrıştırır. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>Duygusal Etki:</strong> Jingle’lar dinleyicinin duygularına hitap ederek olumlu çağrışımlar yaratabilir ve hafızada kalıcı iz bırakabilir. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Çoklu Mekân Kullanımı:</strong> Radyo, televizyon, internet reklamları, sosyal medya ve podcast gibi birçok ortamda kullanılabilirler. :contentReference[oaicite:5]{index=5}</li>
+</ul>
+
+<h4>Jingle’ın Kullanım Alanları</h4>
+<ul>
+  <li><strong>Reklam Kampanyaları:</strong> Televizyon ve radyo reklamlarında marka mesajını güçlendirmek. :contentReference[oaicite:6]{index=6}</li>
+  <li><strong>Podcast ve Radyo Programları:</strong> Bölüm geçişleri veya sponsor tanıtımlarında hatırlanabilir sesler. :contentReference[oaicite:7]{index=7}</li>
+  <li><strong>Marka Kimliği ve Ses Logosuları:</strong> Bir markanın sesli imzası olarak tanıtım materyallerinde kullanılır. :contentReference[oaicite:8]{index=8}</li>
+  <li><strong>Web ve Dijital Platformlar:</strong> Web sitelerinde ve dijital kampanyalarda sesli marka vurgu noktaları. :contentReference[oaicite:9]{index=9}</li>
+</ul>
+
+<h4>Jingle Üretimi ve Strateji</h4>
+<p>Başarılı bir jingle, marka değerlerini, hedef kitlenin zevklerini ve kullanılacağı medya platformunun dinamiklerini hesaba katarak tasarlanır. Bir jingle oluştururken melodi, ritim ve sözlerin birlikte harmanlanması önemlidir; marka ile bağ kuran bir “ses DNA’sı” yaratmak, dinleyicide olumlu duygular ve hatırlanabilirlik sağlar. :contentReference[oaicite:10]{index=10}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
