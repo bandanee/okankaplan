@@ -3,180 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Okan Kaplan – Web Tasarım, Dijital Çözümler ve SEO Uyumlu Web Siteleri</title>
-<meta name="description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
-<meta name="keywords" content="Okan Kaplan, web tasarım, dijital çözümler, SEO uyumlu web, responsive tasarım, UI/UX danışmanlığı, performans optimizasyonu, müşteri odaklı tasarım, modern web siteleri, web geliştirme hizmetleri">
+
+<title>DailyMind – Eksiksiz Kişisel Gelişim & Disiplinler Arası Alanlar</title>
+<meta name="description" content="DailyMind, kişisel gelişim ve disiplinler arası alanlarda 60 günlük sistematik rehber, mindfulness, 3D tasarım, müzik ve web kodlama uygulamaları ile zihinsel farkındalık kazandırır.">
+<meta name="keywords" content="kişisel gelişim, mindfulness, 3D tasarım, web kodlama, müzik ve ses tasarımı, psikoloji, bilim, felsefe, genel kültür, PDF paketleri, uygulama paketleri">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://bandanee.github.io/okankaplan/">
+<link rel="canonical" href="https://bandanee.github.io/DailyMind/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Okan Kaplan – Web Tasarım, Dijital Çözümler ve SEO Uyumlu Web Siteleri">
-<meta property="og:description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
+<meta property="og:title" content="DailyMind – Eksiksiz Kişisel Gelişim & Disiplinler Arası Alanlar">
+<meta property="og:description" content="Duygusal farkındalık, mindfulness, 3D tasarım, müzik ve web kodlama uygulamaları ile zihinsel farkındalık kazanın.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://bandanee.github.io/okankaplan/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/og-image.jpg">
+<meta property="og:url" content="https://bandanee.github.io/DailyMind/">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Okan Kaplan – Web Tasarım, Dijital Çözümler ve SEO Uyumlu Web Siteleri">
-<meta name="twitter:description" content="Okan Kaplan’ın web tasarım ve dijital çözümler hizmetleri. Modern, responsive ve SEO uyumlu web siteleri, UI/UX danışmanlığı, performans optimizasyonu ve müşteri odaklı çözümler.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/twitter-image.jpg">
-<link rel="manifest" href="/okankaplan/manifest.json">
-<meta name="theme-color" content="#000000">
-<!-- CSS ve Fontlar -->
+<meta name="twitter:title" content="DailyMind – Eksiksiz Kişisel Gelişim & Disiplinler Arası Alanlar">
+<meta name="twitter:description" content="Duygusal farkındalık, mindfulness, 3D tasarım, müzik ve web kodlama uygulamaları ile zihinsel farkındalık kazanın.">
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
 <style>
-body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
-main { max-width:1000px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+body { font-family:'Montserrat',sans-serif; padding-top:56px; background:#f5f5f5;}
+main { max-width:1000px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
 footer { background:#343a40; color:#fff; padding:20px 0; margin-top:40px; text-align:center;}
 footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
-#offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
-#offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-.nav .nav-link { padding-left:0.5rem;}
-.nav .nav .nav-link { padding-left:1.5rem; font-size:0.95rem;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+#offcanvasLeftToggle { position:fixed; top:10px; left:10px; z-index:1080;}
+#offcanvasRightToggle { position:fixed; top:10px; right:10px; z-index:1080;}
+.offcanvas { overflow:auto;}
 </style>
- <script>
+
+<script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
   .then(t => document.head.insertAdjacentHTML("beforeend", t))
   .catch(e => console.error("ek_head yüklenemedi", e));
-</script> 
+</script>
 </head>
 <body>
 
-<!-- Sol üst toggle -->
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button>
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
-<!-- Sağ üst toggle -->
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="padding-left:40px">Okan Kaplan</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee DailyMind</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas (Kategoriler) -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Kategoriler</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
-  </div>
-  <div class="offcanvas-body">
-  
-    <ul class="nav flex-column">
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/DailyMind/">DailyMind</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/">Dijital İçerik Üretimi</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">Blog & Makaleler</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/seo/">SEO Uyumlu İçerik</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">Sosyal Medya İçerikleri</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/">Eğitim ve Kurslar</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">Online Kurslar</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/workshop/">Workshop & Webinar</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/kurslar/egitim-materyalleri/">PDF & Sunumlar</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/">Web Hizmetleri</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/tasarim/">Web Tasarımı</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/gelistirme/">Web Geliştirme</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/web/ui-ux/">UI/UX Tasarımı</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/">3D & Animasyon</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/modelleme/">3D Modelleme</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/animasyon/">Animasyon & Motion Graphics</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/3d/sanal-urun/">Sanal Ürün & Sahne</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/">Ses & Müzik</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/podcast/">Podcast & Sesli İçerik</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/jingle/">Jingle & Arka Plan Müziği</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/ses/duzenleme/">Ses Düzenleme & Mastering</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/">Video Prodüksiyon</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/kurgu/">Kurgu & Montaj</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/tanitim/">Tanıtım & Eğitim Videoları</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/video/animasyon/">Video Animasyon</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/">Grafik & Görsel Tasarım</a>
-        <ul class="nav flex-column ms-3 mb-2">
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/logo/">Logo & Kurumsal Kimlik</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/sosyal-medya/">Sosyal Medya Görselleri</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://bandanee.github.io/okankaplan/grafik/brosur/">Broşür & PDF Tasarımı</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+<div class="offcanvas offcanvas-start" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<!-- Sağ Offcanvas (TOC veya içerik listesi) -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" id="offcanvasRight">
   <div id="toc-placeholder"></div>
   <script>
     fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-      .then(r => { if (!r.ok) throw new Error('toc.html yüklenemedi'); return r.text(); })
+      .then(r => r.text())
       .then(html => document.getElementById('toc-placeholder').innerHTML = html)
       .catch(e => console.error(e));
   </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
-<main class="col-12 col-lg-9 mx-auto">
-<h2>Hakkımda</h2>
-<p>Merhaba, ben Okan Kaplan. Web tasarım ve dijital çözümler alanında uzun yıllardır faaliyet gösteriyorum. Amacım, modern, hızlı ve kullanıcı dostu web siteleri tasarlayarak müşterilerimin dijital dünyadaki varlıklarını güçlendirmektir. Her proje benim için özel bir yolculuktur ve müşterilerimle yakın iletişim kurarak onların ihtiyaçlarını en doğru şekilde anlamaya çalışırım.</p>
+<main class="col-12 col-lg-12 mx-auto">
 
-<h2>Amacım</h2>
-<p>Kullanıcı deneyimini ön planda tutan, SEO uyumlu ve responsive web tasarımlarıyla markaların dijital görünürlüğünü artırmayı hedefliyorum. Her müşteriye özgün çözümler sunarak, onların hedef kitlesiyle etkili bir şekilde iletişim kurmalarını sağlıyorum.</p>
+<h2><strong>DailyMind – Eksiksiz Kişisel Gelişim & Disiplinler Arası Alanlar</strong></h2>
 
-<h2>Hizmetlerim</h2>
-<p>Web tasarım, UI/UX danışmanlığı, SEO optimizasyonu, responsive ve mobil uyumlu tasarım, performans optimizasyonu, dijital içerik üretimi, eğitim ve kurslar, 3D & animasyon, ses ve video prodüksiyon, grafik & görsel tasarım gibi kapsamlı hizmetler sunuyorum.</p>
+<ul>
+  <li><strong>Duygusal Farkındalık:</strong> Duyguları bastırmadan fark etmeyi, bedensel sinyalleri okumayı ve bilinçli seçim yapmayı öğretir.</li>
+  <li><strong>Nefes & Mindfulness:</strong> Günde 1–2 dakikalık çalışmalarla dikkat dağınıklığını azaltır, sinir sistemini düzenler ve anda kalmayı destekler.</li>
+  <li><strong>Thought Defusion (Düşünceyle Mesafe):</strong> Düşüncelerin zihinsel olaylar olduğunu fark ettirir ve özdeşleşmeden yönetmeyi öğretir.</li>
+  <li><strong>Kognitif Yeniden Çerçeveleme:</strong> Esnek ve işlevsel bakış açılarıyla olaylara yaklaşmayı sağlar.</li>
+  <li><strong>Zihinsel Dayanıklılık:</strong> Zorlayıcı duygularla kaçmadan kalabilme, toparlanma ve devam edebilme kapasitesini geliştirir.</li>
+  <li><strong>Değerler & İçsel Motivasyon:</strong> Bireyin kendi değerleriyle uyumlu hedefler belirlemesini sağlar.</li>
+</ul>
 
-<h2>Çalışma Sürecim</h2>
-<p>Her projeye detaylı bir analiz ile başlarım. İhtiyaç analizi, rakip incelemesi, kullanıcı deneyimi tasarımı ve teknik optimizasyon adımlarını takip ederek etkili ve kaliteli web çözümleri üretirim. Süreç boyunca müşterilerimle sürekli iletişimde kalarak, geri bildirimleri değerlendiririm.</p>
+<h4>Disiplinler Arası Zihinsel Gelişim Alanları</h4>
+<ul>
+  <li>📖 <strong>Okuma & Düşünsel Farkındalık:</strong> Odaklanma, iç ses gözlemi, anlamlandırma ve eleştirel düşünme.</li>
+  <li>♟️ <strong>Satranç & Stratejik Düşünme:</strong> Sabır, karar alma, öngörü ve hata sonrası toparlanma.</li>
+  <li>🎨 <strong>Sanat & Yaratıcı Algı:</strong> Anda kalma, estetik dikkat ve zihinsel yavaşlama.</li>
+  <li>🧠 <strong>Öğrenme & Bilişsel Esneklik:</strong> Hafıza, dikkat, problem çözme ve öğrenmeyi öğrenme.</li>
+  <li>🌱 <strong>Günlük Yaşam Pratikleri:</strong> Rutinler, dijital farkındalık, mikro alışkanlıklar ve entegrasyon.</li>
+  <li>💻 <strong>Web Kodlama:</strong> HTML, CSS, JS ile interaktif projeler üretme.</li>
+  <li>🎵 <strong>Müzik & Ses Tasarımı:</strong> Ritm, tonlama, dijital müzik üretimi ve duygu/etki yaratma.</li>
+  <li>🖌️ <strong>3D Tasarım & Modelleme:</strong> 3D modelleme, animasyon ve görselleştirme ile problem çözme.</li>
+  <li>🌍 <strong>Genel Kültür & Bilgi Birikimi:</strong> Tarih, bilim, felsefe, güncel olaylar ve farklı kültürel perspektifler.</li>
+  <li>🧩 <strong>Psikoloji & Felsefe:</strong> İnsan davranışları ve yaşam felsefeleri.</li>
+  <li>🔬 <strong>Bilim & Teknoloji:</strong> Bilimsel düşünce, araştırma metodları ve teknolojik yenilikler.</li>
+</ul>
 
-<h2>Müşteri Memnuniyeti</h2>
-<p>Müşteri memnuniyeti önceliğimdir. Proje süresince sürekli iletişim kurar, geri bildirimleri değerlendirir ve projeyi müşterinin beklentilerine göre şekillendiririm.</p>
+<h4>PDF Paketleri</h4>
+<ul>
+  <li>Duygusal Farkındalık PDF</li>
+  <li>Nefes & Mindfulness PDF</li>
+  <li>Web Kodlama PDF</li>
+  <li>Müzik & Ses Tasarımı PDF</li>
+  <li>3D Tasarım & Modelleme PDF</li>
+</ul>
 
-<h2>Referanslar</h2>
-<p>Bugüne kadar farklı sektörlerde birçok web projesine imza attım. İşbirliği yaptığım şirketler ve bireyler, sunduğum hizmetin kalitesini ve profesyonelliğini onaylamaktadır.</p>
+<h4>Resim / Medya Paketleri</h4>
+<ul>
+  <li>Duygusal Farkındalık Görsel Paketi</li>
+  <li>Sanat & Yaratıcı Algı Görselleri</li>
+  <li>Web Kodlama Görsel Paketi</li>
+</ul>
 
-<h2>Gelecek Vizyonum</h2>
-<p>Dijital dünyadaki hızlı değişimlere uyum sağlayarak, her zaman yenilikçi ve modern çözümler üretmeyi hedefliyorum. Müşterilerimin dijital dönüşüm süreçlerinde güvenilir bir partner olarak yanlarında olmak ve iş hedeflerine ulaşmalarını kolaylaştırmak önceliğimdir.</p>
-</main>
-</div>
+<h4>Ses / Müzik Paketleri</h4>
+<ul>
+  <li>Müzik & Ses Tasarımı Paketi</li>
+</ul>
 
-<!-- Footer -->
-<footer>
-<div class="container">
-<p>&copy; 2026 Okan Kaplan | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
-</div>
-</footer>
+<h4>3D Tasarım Paketleri</h4>
+<ul>
+  <li>3D Tasarım & Modelleme Paketi</li>
+</ul>
+
+<h4>Uygulama Paketleri</h4>
+<ul>
+  <li>Duygusal Farkındalık App</li>
+  <li>Web Kodlama App</li>
+  <li>Müzik & Ses Tasarımı App</li>
+  <li>3D Tasarım & Modelleme App</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
 <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/okankaplan/sw.js");
-}
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
-<!-- Bootstrap JS Bundle -->
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView:'dayGridMonth',
+        locale:'tr',
+        height:'auto',
+        fixedWeekCount:false,
+        firstDay:1,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' },
+        events:videoEvents,
+        eventClick:function(info) {
+          info.jsEvent.preventDefault();
+          const desc = info.event.extendedProps.description||'';
+          const modalHtml = `
+            <div class="modal fade" id="eventModal" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">${info.event.title}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body"><p>${desc}</p>
+                    <p><strong>⏰ Saat:</strong> ${info.event.start.toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'})}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="${info.event.url}" target="_blank" class="btn btn-danger">YouTube’da Aç</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                  </div>
+                </div>
+              </div>
+            </div>`;
+          document.body.insertAdjacentHTML('beforeend', modalHtml);
+          const modal = new bootstrap.Modal(document.getElementById('eventModal'));
+          modal.show();
+          document.getElementById('eventModal').addEventListener('hidden.bs.modal', ()=> document.getElementById('eventModal').remove());
+        }
+      });
+      calendar.render();
+    }).catch(err => console.error(err));
+});
+</script>
+
+</main></div>
+
+<div id="footer-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r=>r.text())
+  .then(html=>document.getElementById('footer-placeholder').innerHTML=html)
+  .catch(e=>console.error(e));
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
