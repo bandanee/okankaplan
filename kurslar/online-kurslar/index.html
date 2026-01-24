@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Online Kurslar — Dijital Eğitimler & Uzmanlaşma Programları | Okan Kaplan</title>
-<meta name="description" content="Okan Kaplan’ın online kurs platformu: web tasarım, dijital içerik üretimi, 3D modelleme, ses ve video prodüksiyon gibi alanlarda kapsamlı online eğitimler ile dijital yeteneklerinizi geliştirin.">
-<meta name="keywords" content="online kurslar, dijital eğitimler, web tasarım kursu, 3D modelleme eğitimi, ses prodüksiyon kursu, video kurgu eğitimi, dijital içerik kursu, online öğrenme, interaktif eğitim, Okan Kaplan">
+
+<title>DailyMind – Online Kurslar</title>
+<meta name="description" content="Okan Kaplan tarafından sunulan online kurslar: dijital eğitimler, video dersler, sertifikalı eğitim programları ve kendi hızında öğrenme fırsatları.">
+<meta name="keywords" content="online kurslar, dijital eğitim, video dersler, sertifikalı kurs, eğitim programları, interaktif eğitim">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Online Kurslar — Dijital Eğitimler & Uzmanlaşma Programları | Okan Kaplan">
-<meta property="og:description" content="Okan Kaplan’ın online kurs platformu: web tasarım, dijital içerik üretimi, 3D modelleme, ses ve video prodüksiyon gibi alanlarda kapsamlı online eğitimler ile dijital yeteneklerinizi geliştirin.">
+<meta property="og:title" content="DailyMind – Online Kurslar">
+<meta property="og:description" content="Online kurslar: video dersler, eğitim içerikleri ve sertifikalı eğitim programları ile dijital öğrenme fırsatlarını keşfedin.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/kurslar/online-kurslar/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/online-kurslar-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Online Kurslar — Dijital Eğitimler & Uzmanlaşma Programları | Okan Kaplan">
-<meta name="twitter:description" content="Okan Kaplan’ın online kurs platformu: web tasarım, dijital içerik üretimi, 3D modelleme, ses ve video prodüksiyon gibi alanlarda kapsamlı online eğitimler ile dijital yeteneklerinizi geliştirin.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/online-kurslar-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Online Kurslar">
+<meta name="twitter:description" content="Online kurslar: video dersler, eğitim içerikleri ve sertifikalı eğitim programları ile dijital öğrenme fırsatlarını keşfedin.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
@@ -39,71 +44,119 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
+<script>
+fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
+  .then(r => r.text())
+  .then(t => document.head.insertAdjacentHTML("beforeend", t))
+  .catch(e => console.error("ek_head yüklenemedi", e));
+</script>
 </head>
 <body>
 
 <button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
 <button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('toc-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>Online Kurslarla Dijital Becerilerinizi Güçlendirin</h3><p>Teknolojinin hızla geliştiği dijital çağda, <strong>online kurslar</strong> öğrenme alışkanlıklarını dönüştürdü. Artık dilediğiniz yerden, dilediğiniz zaman kendi hızınızda öğrenebilirsiniz. Okan Kaplan’ın sunduğu <strong>online eğitim platformu</strong>, web tasarımından dijital içerik üretimine, 3D modelleme ve animasyondan ses ve video prodüksiyonuna kadar geniş bir yelpazede online kurslar sunar.</p><p>Bu kurslar, sektörün ihtiyaç duyduğu becerileri kazanmanız için özel olarak tasarlanmıştır ve proje odaklı yapılarıyla hem teorik bilgi hem de gerçek uygulama deneyimi sağlar.</p><p><br></p><h3>Neden Online Kurslar?</h3><p>Geleneksel eğitim modelleri artık hızla dijitalleşiyor. Online kurslar sayesinde:</p><ul><li><strong>Zaman ve yer sınırlaması olmadan</strong> öğrenim sağlayabilirsiniz.</li><li>Kendi hızınızda ilerleyebilir, tekrar izleme ve pratik yapma fırsatı bulursunuz.</li><li>Kurs içerikleri sürekli güncellenir ve en yeni teknoloji/method’lar ile uyumlu olur.</li><li>Farklı alanlarda uzman eğitmenlerden global ölçekte eğitim alabilirsiniz. </li></ul><h3>Hangi Alanlarda Eğitimler Sunuluyor?</h3><h4>📌 Web &amp; Yazılım</h4><p>Web tasarım ve geliştirme odaklı kurslar; HTML, CSS, JavaScript gibi temel teknolojilerin yanı sıra modern framework ve responsive tasarım becerilerini öğretir. </p><h4>🎨 Dijital İçerik &amp; Grafik</h4><p>Blog yazımı, SEO uyumlu içerik oluşturma, sosyal medya kampanya içerikleri ve görsel tasarım eğitimleri ile dijital medya becerilerinizi geliştirin. </p><h4>🧠 3D Modellleme &amp; Animasyon</h4><p>3D tasarım ve animasyon kursları ile Blender, Maya gibi araçlarla çalışmayı öğrenebilir; görsel projeler üretme yetkinliği kazanabilirsiniz. </p><h4>🎧 Ses Prodüksiyon</h4><p>Ses ve podcast prodüksiyonu kursları; miksaj, mastering, ses efektleri ve ses tasarımı gibi konulara odaklanır. </p><h4>📹 Video &amp; Kurgu</h4><p>Video prodüksiyon ve kurgu eğitimleri ile film, reklam, sosyal medya ve YouTube odaklı içerikler üretme becerisi kazanırsınız. </p><p><br></p><h3>Etkileşimli &amp; Uygulamalı Eğitim Deneyimi</h3><p>Her kurs, sadece teorik eğitim değil aynı zamanda <strong>uygulama ile öğrenme deneyimi</strong> sunar. Katılımcılar gerçek projeler üzerinde çalışarak öğrendiklerini pekiştirir ve ilerleme gösterebilir.</p><p>Online kursların avantajlarından biri de, her seviyeye uygun içerikler sunmasıdır — hem başlangıç hem de ileri düzey kursiyerler için ideal eğitim seçenekleri mevcuttur. </p><p><br></p><h3>Sertifikasyon ve Kariyer Destekli Eğitim</h3><p>Tamamlanan kurslar sonunda verilen <strong>sertifikalar</strong>, CV’nizi güçlendirir ve profesyonel dünyada sizi bir adım öne taşır. Ayrıca bazı kurslar kariyer desteği ve portföy geliştirme fırsatlarıyla da desteklenir.</p><p><br></p><h3>Sonuç</h3><p>Okan Kaplan’ın online kurs platformu, dijital çağın gerektirdiği becerileri kazanmak isteyen herkes için kapsamlı, güncel ve etkili bir eğitim deneyimi sunar. Web, dijital içerik, 3D, ses ve video alanlarında uzmanlaşmak istiyorsanız doğru yerdesiniz.</p>
+
+<h3><strong>Online Kurslar</strong></h3>
+
+<p>Online kurslar, internet üzerinden erişilebilen video dersler, interaktif materyaller ve dijital eğitim içeriklerinden oluşan öğrenme programlarıdır. Bu kurslar sayesinde dünyanın her yerinden kendi hızınızda eğitim alabilir, yeni beceriler kazanabilir ve kişisel gelişiminizi sürdürebilirsiniz. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Online Kursların Avantajları</h4>
+<ul>
+  <li>Zamandan ve mekândan bağımsız öğrenme imkânı.</li>
+  <li>Video dersler ve multimedya içeriklerle zengin öğrenme deneyimi.</li>
+  <li>Sertifikalı eğitimlerle kariyerinizi destekleme fırsatı.</li>
+  <li>Her seviyeye uygun başlangıçtan ileri düzeye kadar eğitim içerikleri sunma. :contentReference[oaicite:2]{index=2}</li>
+</ul>
+
+<h4>Online Kurs Örnekleri</h4>
+<ul>
+  <li><strong>Dijital Pazarlama Eğitimi:</strong> SEO, içerik stratejileri ve sosyal medya pazarlaması.</li>
+  <li><strong>Web Tasarım Kursu:</strong> HTML, CSS, JavaScript gibi temel web teknolojileri.</li>
+  <li><strong>Kişisel Gelişim Programları:</strong> Zaman yönetimi, iletişim becerileri ve liderlik.</li>
+  <li><strong>Teknoloji ve Kodlama:</strong> Python, veri analizi veya yapay zeka uygulamaları.</li>
+</ul>
+
+<h4>Online Kurslara Nasıl Başlanır?</h4>
+<p>Online kurslara başlamak için bir öğrenme platformu seçebilir, ilgili kursu inceleyip kayıt yaptırabilirsiniz. Çoğu online kurs; video dersler, PDF materyaller, quiz’ler ve öğrenci toplulukları ile desteklenir. Eğitim içeriklerini tamamladığınızda genellikle bir katılım belgesi veya sertifika sunulur. :contentReference[oaicite:3]{index=3}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: videoEvents,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    })
+    .catch(err => console.error('Hata:', err));
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
