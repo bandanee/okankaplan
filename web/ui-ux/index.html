@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UI/UX Tasarım Hizmeti — Kullanıcı Arayüzü & Deneyimi | Okan Kaplan</title>
-<meta name="description" content="Profesyonel UI/UX tasarım hizmeti ile web sitenizin ve dijital ürünlerinizin kullanıcı deneyimini ve arayüzünü güçlendirin. Etkili arayüzler, kullanıcı odaklı deneyimler ve dönüşüm odaklı tasarım çözümleri.">
-<meta name="keywords" content="UI tasarım, UX tasarım, kullanıcı arayüzü, kullanıcı deneyimi, web UI UX, etkileşim tasarımı, wireframe prototip, UI/UX geliştirme, mobil UX, web deneyimi, Okan Kaplan">
+
+<title>DailyMind – Web UI &amp; UX Tasarım</title>
+<meta name="description" content="Web sitelerinde UI (kullanıcı arayüzü) ve UX (kullanıcı deneyimi) tasarım kavramlarını öğrenin. Doğru tasarım ilkeleriyle etkileşimli ve kullanıcı dostu ürünler oluşturun.">
+<meta name="keywords" content="UI tasarım, UX tasarım, kullanıcı arayüzü, kullanıcı deneyimi, web tasarım, dijital ürün tasarımı">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/web/ui-ux/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="UI/UX Tasarım Hizmeti — Kullanıcı Arayüzü & Deneyimi | Okan Kaplan">
-<meta property="og:description" content="Profesyonel UI/UX tasarım hizmeti ile web sitenizin ve dijital ürünlerinizin kullanıcı deneyimini ve arayüzünü güçlendirin. Etkili arayüzler, kullanıcı odaklı deneyimler ve dönüşüm odaklı tasarım çözümleri.">
+<meta property="og:title" content="DailyMind – Web UI &amp; UX Tasarım">
+<meta property="og:description" content="Web sitelerinde kullanıcı arayüzü (UI) ve kullanıcı deneyimi (UX) tasarım ilkelerini öğrenin. UI/UX tasarım yolları, örnekleri ve iyi uygulamalar.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/web/ui-ux/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/web-ui-ux-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="UI/UX Tasarım Hizmeti — Kullanıcı Arayüzü & Deneyimi | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel UI/UX tasarım hizmeti ile web sitenizin ve dijital ürünlerinizin kullanıcı deneyimini ve arayüzünü güçlendirin. Etkili arayüzler, kullanıcı odaklı deneyimler ve dönüşüm odaklı tasarım çözümleri.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/web-ui-ux-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Web UI &amp; UX Tasarım">
+<meta name="twitter:description" content="Web sitelerinde UI ve UX tasarım kavramlarını öğrenin. Kullanıcı dostu ve etkili arayüzler için temel ilkeleri keşfedin.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -50,64 +56,109 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 </head>
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('toc-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>UI/UX Tasarım — Kullanıcı Odaklı Dijital Deneyimler Oluşturun</h3><p>Bir web sitesinin ya da dijital ürünün başarısı yalnızca görsel estetiğe bağlı değildir. <strong>UI (User Interface)</strong>, yani kullanıcı arayüzü; site veya uygulamanın görsel yapısını, renkleri, tipografiyi ve kullanıcıyla etkileşime geçen tüm görsel öğeleri kapsar. Buna karşılık <strong>UX (User Experience)</strong>, kullanıcıların dijital ürünle etkileşimi sırasında yaşadıkları <strong>deneyimi, kullanım kolaylığını ve memnuniyetini</strong> ifade eder. Birlikte ele alındıklarında modern tasarımın temelini oluştururlar.</p><p><br></p><h3>Neden UI/UX Tasarım Önemlidir?</h3><p>UI/UX tasarım, sadece “güzel görünmek” anlamına gelmez; aynı zamanda <strong>kullanıcıların sitenizde kolayca gezinmesini, aradıklarını hızlıca bulmasını ve markanızla olumlu bir etkileşim yaşamasını sağlar</strong>. İyi bir UI/UX tasarımı ile ziyaretçiler;</p><ul><li>Sitenizde <strong>daha uzun süre kalır</strong>,</li><li>Hedeflenen işlemleri daha kolay gerçekleştirir,</li><li><strong>Dönüşüm oranları yükselir</strong>,</li><li>Ve marka sadakati güçlenir.</li></ul><p>Bu yaklaşım, hem kullanıcı memnuniyetini hem de arama motoru performansını destekler. Sorunsuz bir deneyim, ziyaretçilerin tekrar geri gelme olasılığını artırır.</p><p><br></p><h3>UI/UX Tasarım Sürecimiz</h3><p><strong>Araştırma ve Analiz:</strong></p><p> UI/UX tasarım süreci, hedef kitlenin davranışlarını ve ihtiyaçlarını anlamakla başlar. Kullanıcı personası ve davranış analizi yaparak tasarım stratejisi oluştururuz.</p><p><strong>Wireframe ve Prototip Oluşturma:</strong></p><p> Ziyaretçinin yolculuğunu görselleştirmek için wireframe ve prototipler hazırlanır. Bu adım taslak tasarımın test edilmesini sağlar ve en uygun kullanıcı akışı belirlenir.</p><p><strong>Tasarım ve Uygulama:</strong></p><p> UI tasarımı ile görsel öğeler, renk paletleri, ikonografi ve tipografi seçimi yapılır; UX tasarımı ile kullanıcı yolculuğu optimize edilir. Bu aşama, görsel çekicilik ile işlevselliğin birleştiği noktadır.</p><p><strong>Kullanıcı Testi ve İyileştirme:</strong></p><p> Tasarım tamamlandıktan sonra gerçek kullanıcılarla testler yapılır ve geri bildirimler doğrultusunda düzenlemeler gerçekleştirilir. Bu sürekli iyileştirme süreci, site performansını artırır.</p><h3>UI/UX Tasarımın Faydaları</h3><p><strong>Kolay Kullanım:</strong> Kullanıcılar aradıkları bilgilere kolayca ulaşır, navigasyon net olur.</p><p> <strong>Etkileşim ve Dönüşüm:</strong> Kullanıcı aksiyonları daha hızlı gerçekleşir ve dönüşümler artar.</p><p> <strong>Marka Güveni:</strong> Tutarlı ve profesyonel deneyim, ziyaretçide güven duygusu oluşturur.</p><p> <strong>Performans ve SEO:</strong> İyi tasarlanmış UI/UX, sayfanın hızlı yüklenmesine ve SEO performansına olumlu katkı sağlar.</p><h3>Sonuç</h3><p>UI/UX tasarım, dijital projelerin <strong>etkili, kullanıcı dostu ve dönüşüm odaklı</strong> bir deneyime sahip olması için vazgeçilmezdir. Bir ziyaretçi sitenizi ilk açtığında ne hissediyorsa, bu deneyim markanızla olan ilişkisinin temelidir. UI/UX tasarım ile bu deneyimi optimize ederek hem kullanıcı memnuniyeti hem de iş hedeflerinizi maksimize edebilirsiniz. Okan Kaplan olarak size bu süreçte modern, etkili ve yenilikçi UI/UX çözümleri sunuyoruz.</p>
+
+<h3><strong>Web UI &amp; UX Tasarım</strong></h3>
+
+<p><strong>UI (User Interface)</strong>, bir dijital ürünün kullanıcı ile etkileşime geçtiği görsel yüzüdür; renkler, butonlar, tipografi, menüler ve yerleşim gibi unsurlar ile kullanıcıya estetik ve işlevsel bir arayüz sunar. <strong>UX (User Experience)</strong> ise, bu arayüzle etkileşimin toplam deneyimini ifade eder — bir ürünün ne kadar kolay, akıcı ve memnuniyet verici kullanıldığını belirler. :contentReference[oaicite:0]{index=0}</p>
+
+<h4>UI ve UX Arasındaki Fark</h4>
+<p>UI, kullanıcı arayüzünü “nasıl göründüğü” açısından tanımlarken; UX, bir ürünün kullanımının “nasıl hissettirdiği” ve ziyaretçinin hedeflerine ne kadar hızlı ulaşabildiği ile ilgilenir. UI genellikle görsellik ve grafiksel düzenle alakalıyken UX, kullanıcı davranışı, akış ve kullanılabilirliğe odaklanır. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>UI/UX Tasarımın Temel İlkeleri</h4>
+<ul>
+  <li><strong>Kullanıcı Merkezli Tasarım:</strong> Tasarım sürecinde kullanıcı ihtiyaçlarını ve beklentilerini ön planda tutmak, daha etkili çözümler üretir. :contentReference[oaicite:2]{index=2}</li>
+  <li><strong>Sadelik ve Tutarlılık:</strong> Basit ve tutarlı arayüzler, kullanıcıların site ile daha hızlı adapte olmasını sağlar. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>Accessibility (Erişilebilirlik):</strong> Arayüzün herkes tarafından kullanılabilir olması; okuma kolaylığı, kontrast, navigasyon gibi faktörleri kapsar. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Responsive Tasarım:</strong> UI/UX tasarım, farklı ekran boyutlarında uyumlu şekilde çalışmalıdır. :contentReference[oaicite:5]{index=5}</li>
+</ul>
+
+<h4>UI/UX Tasarım Süreci</h4>
+<p>Tasarım süreci tipik olarak aşağıdaki aşamalardan oluşur:</p>
+<ul>
+  <li><strong>Kullanıcı Araştırması:</strong> Hedef kitlenin ihtiyaçlarını ve davranışlarını analiz etme.</li>
+  <li><strong>Wireframe ve Prototip Oluşturma:</strong> Tasarımın temel yapısını ve akışını basit örneklerle test etme.</li>
+  <li><strong>Görsel Tasarım:</strong> UI öğelerini seçme; renk, tipografi ve stil.</li>
+  <li><strong>Test &amp; İterasyon:</strong> Kullanıcı testleri ile tasarımı geliştirme ve optimize etme. :contentReference[oaicite:6]{index=6}</li>
+</ul>
+
+<h4>UI/UX’in Web Sitelerindeki Önemi</h4>
+<p>İyi bir UI/UX tasarım, web sitelerinin kullanıcı memnuniyetini artırır, kullanıcıların hedeflerine hızlı ulaşmasını sağlar ve etkileşimi yükseltir. Tasarım kullanıcı odaklı olduğunda, hem görsellik hem de kullanılabilirlik dengelenmiş olur; bu da dönüşüm oranlarını yükseltir. :contentReference[oaicite:7]{index=7}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    })
+    .catch(err => console.error('Hata:', err));
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
