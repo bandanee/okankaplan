@@ -1,35 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Web Tasarım Hizmeti — Modern, Responsive & UI/UX Odaklı | Okan Kaplan</title>
-<meta name="description" content="Profesyonel web tasarım hizmeti ile modern, kullanıcı odaklı ve SEO uyumlu web siteleri oluşturun. UI/UX tasarım, responsive deneyim ve stratejik içerik ile dijital varlığınızı güçlendirin.">
-<meta name="keywords" content="web tasarım, responsive web tasarım, UI UX tasarımı, modern web site tasarımı, kullanıcı deneyimi, SEO tasarım, dijital varlık, interaktif web, Okan Kaplan">
+
+<title>DailyMind – Web Tasarım</title>
+<meta name="description" content="Web tasarım hizmeti ve temel web tasarım kavramlarını öğrenin: UI, UX, responsive tasarım, SEO uyumlu yapılar ve modern web tasarım prensipleri.">
+<meta name="keywords" content="web tasarım, UI, UX, responsive web design, web tasarım hizmeti, dijital web, web sitesi tasarımı">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/web/tasarim/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Web Tasarım Hizmeti — Modern, Responsive & UI/UX Odaklı | Okan Kaplan">
-<meta property="og:description" content="Profesyonel web tasarım hizmeti ile modern, kullanıcı odaklı ve SEO uyumlu web siteleri oluşturun. UI/UX tasarım, responsive deneyim ve stratejik içerik ile dijital varlığınızı güçlendirin.">
+<meta property="og:title" content="DailyMind – Web Tasarım">
+<meta property="og:description" content="Web tasarım hizmeti ve temel web tasarım kavramlarını öğrenin: UI, UX, responsive tasarım, SEO uyumlu yapılar ve modern web tasarım prensipleri.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/web/tasarim/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/web-tasarim-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Tasarım Hizmeti — Modern, Responsive & UI/UX Odaklı | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel web tasarım hizmeti ile modern, kullanıcı odaklı ve SEO uyumlu web siteleri oluşturun. UI/UX tasarım, responsive deneyim ve stratejik içerik ile dijital varlığınızı güçlendirin.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/web-tasarim-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Web Tasarım">
+<meta name="twitter:description" content="Web tasarım hizmeti ve temel web tasarım kavramlarını öğrenin: UI, UX, responsive tasarım, SEO uyumlu yapılar ve modern web tasarım prensipleri.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -38,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -49,66 +54,110 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .catch(e => console.error("ek_head yüklenemedi", e));
 </script>
 </head>
+
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button>
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('toc-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>Web Tasarım Hizmeti ile Dijitalde Fark Yaratın</h3><p>Günümüz dijital dünyasında bir web sitesinin başarısı, yalnızca güzel görünmesine değil; aynı zamanda <strong>kullanıcı dostu</strong>, <strong>strategie odaklı</strong> ve <strong>performanslı</strong> çalışmasına bağlıdır. Okan Kaplan’ın sunduğu <strong>web tasarım hizmeti</strong>, markanızın dijitalde güçlü bir ilk izlenim bırakması için modern tasarım prensipleri ile kullanıcı deneyimini birleştirir.</p><p>Web tasarımın temel amacı; ziyaretçiyi doğru yönlendirmek, markanın değerlerini görsel ve işlevsel bir şekilde aktarmak ve hedef kitlenin beklentilerine cevap vermektir. Biz, bu amaç doğrultusunda hem estetik hem de fonksiyonel web sayfaları geliştiriyoruz.</p><p><br></p><h3>Modern ve Etkileyici Arayüzler</h3><p>Bir web sitesi; renk uyumu, tipografi, boşluk kullanımı ve görsel hiyerarşi gibi unsurlarla <strong>marka kimliğinin dijital temsilcisi</strong> haline gelir. Tasarımlarımız;</p><ul><li>Marka kişiliğini yansıtan görsel dil</li><li>Profesyonel tipografi seçimi</li><li>Akıcı ve sezgisel arayüz yapısı</li><li>Görsel hiyerarşi ve CTA (Call to Action) odaklı düzenler</li></ul><p>ile sitenizi <strong>ziyaretçilerin dikkatini çeken</strong> bir deneyime dönüştürür.</p><p><br></p><h3>Responsive (Mobil Uyumlu) Tasarım</h3><p>Bugün internet kullanıcılarının büyük çoğunluğu mobil cihazlardan site ziyaret etmektedir. Bu nedenle tasarladığımız tüm web siteleri, <strong>tüm cihazlarda ve ekran boyutlarında sorunsuz çalışacak şekilde optimize edilir</strong>. Masaüstü, tablet ve mobil görünümde tutarlı bir kullanıcı deneyimi sağlamak, dönüşüm oranları ve SEO performansı açısından kritik bir avantajdır.</p><p>Responsive tasarım, sitenin hem görsel uyumunu hem de teknik yapısını güçlendirir.</p><p><br></p><h3>UI / UX Odaklı Tasarım Yaklaşımı</h3><p>UI (User Interface) ve UX (User Experience), modern tasarımların ayrılmaz parçalarıdır. UI tasarımı site içerisindeki görsel öğelerin düzenini ifade ederken, UX tasarımı ziyaretçinin bu arayüzdeki yolculuğunu optimize eder.</p><p>Web tasarım hizmetimizde:</p><ul><li><strong>Sezgisel menü yapıları</strong></li><li><strong>Kolay erişilebilir içerik akışı</strong></li><li><strong>Net ve açık CTA butonları</strong></li><li><strong>Kullanıcı merkezli görsel hiyerarşi</strong></li></ul><p>gibi unsurlarla kullanıcı memnuniyetini ön planda tutar, markanızın dijital hedeflerine daha hızlı ulaşmasını sağlarız.</p><p><br></p><h3>SEO ve Performans Odaklı Tasarım</h3><p>Bir web sitesi yalnızca güzel görünmekle kalmamalı; <strong>arama motorlarında da güçlü performans göstermelidir</strong>. SEO uyumlu tasarım uygulamalarımız:</p><ul><li>Hız optimizasyonu</li><li>Semantik HTML yapısı</li><li>Doğru başlık etiketleri (H1, H2, meta tag’ler)</li><li>Görsel alt etiketleri</li></ul><p>gibi bileşenleri kapsar. Bu sayede siteniz, hem kullanıcılar için akıcı hem de arama motorları için okunabilir bir yapıda olur.</p><p><br></p><h3>İçerik ve Teknoloji Entegrasyonu</h3><p>Tasarım sürecimiz sadece görsellik ile sınırlı kalmaz; içerik stratejisi ve teknik yapılarla birlikte planlanır. Kullanıcı odaklı içerikler, stratejik yerleştirmeler ve etkileşim odaklı yapılarla, dönüşüm odaklı bir web tasarımı oluştururuz.</p><p><br></p><h3>Sonuç</h3><p>Profesyonel web tasarım hizmeti, markanızın dijitalde <strong>ilgi çeken, kullanıcı dostu ve SEO odaklı bir yüzü</strong>dür. Modern görsel dili, güçlü kullanıcı deneyimi ve performans odaklı teknik yapısıyla tasarlanan web siteleri ile <strong>ziyaretçilerinizi müşteriye dönüştürün</strong>. Okan Kaplan olarak, dijital hedeflerinize ulaşmanız için yanınızdayız.</p>
+
+<h3><strong>Web Tasarım Hizmeti &amp; Temelleri</strong></h3>
+
+<p>Web tasarım; bir web sitesinin görsel ve işlevsel yapısını planlama, tasarlama ve kullanıcı için etkili bir deneyim oluşturma sürecidir. Modern web tasarım, estetik görünüm kadar kullanıcı deneyimi ve arama motoru uyumluluğunu da kapsar. :contentReference[oaicite:1]{index=1}</p>
+
+<p><!-- Sayfanın başlangıç içeriği -->Web tasarım hizmeti ile dijitalde fark yaratın: estetik, fonksiyonel, UX odaklı ve SEO uyumlu tasarım ilkeleri ile markanızın dijital yüzünü güçlendirin. :contentReference[oaicite:2]{index=2}</p>
+
+<h4>Web Tasarımın Temel Unsurları</h4>
+<ul>
+  <li><strong>Görsel Tasarım (UI):</strong> Renkler, tipografi ve grafiklerin uyumlu kullanımı saytın estetik görünümünü oluşturur. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>Kullanıcı Deneyimi (UX):</strong> Kullanıcıların siteyi nasıl deneyimlediğini optimize etme sürecidir. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Responsive Tasarım:</strong> Sayfanın tüm cihazlarda uyumlu çalışmasını sağlayan tasarım yaklaşımıdır. :contentReference[oaicite:5]{index=5}</li>
+  <li><strong>SEO Uyumlu Yapı:</strong> Arama motorlarında daha üst sıralarda görünmesini sağlayacak teknik ve içerik düzenlemeleridir. :contentReference[oaicite:6]{index=6}</li>
+</ul>
+
+<h4>Neden Web Tasarım Önemlidir?</h4>
+<p>İyi tasarlanmış bir web sitesi, ziyaretçilerin aradıkları bilgilere hızlıca ulaşmasını sağlar, marka güvenilirliğini artırır ve dijital etkileşimi yükseltir. Günümüzde kullanıcıların büyük çoğunluğu mobil cihazlardan site ziyaret ettiği için responsive yapı özellikle önemlidir. :contentReference[oaicite:7]{index=7}</p>
+
+<h4>Tasarım Süreci – Aşamalar</h4>
+<ul>
+  <li><strong>Araştırma &amp; Planlama:</strong> Hedef kitle, içerik ve fonksiyon ihtiyacı belirlenir.</li>
+  <li><strong>Wireframe &amp; Mockup:</strong> Sayfa iskeleti ve taslak tasarımlar hazırlanır. :contentReference[oaicite:8]{index=8}</li>
+  <li><strong>UI/UX Tasarımı:</strong> Görsel ve etkileşim planları netleştirilir.</li>
+  <li><strong>Coding &amp; Test:</strong> HTML, CSS ve JavaScript ile tasarım koda dökülür ve test edilir.</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: videoEvents,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
