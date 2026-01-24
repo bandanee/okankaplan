@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Podcast İçerik Üretimi & Prodüksiyon — Sesli Yayın Hizmetleri | Okan Kaplan</title>
-<meta name="description" content="Profesyonel podcast içerik üretimi: konsept, planlama, kayıt, montaj, düzenleme ve dağıtım gibi tüm aşamalarla markanız için etkileyici sesli yayınlar oluşturun.">
-<meta name="keywords" content="podcast üretimi, podcast içerik, sesli yayın hizmeti, podcast prodüksiyon, podcast planlama, ses düzenleme, marka podcast, dijital medya, Okan Kaplan">
+
+<title>DailyMind – Podcast Nedir?</title>
+<meta name="description" content="Podcast nedir, nasıl yapılır ve dijital sesli yayıncılık dünyasında nasıl yer alır? Podcast türleri, dinleme araçları ve üretim adımları hakkında kapsamlı bilgi.">
+<meta name="keywords" content="podcast, podcast nedir, podcast nasıl yapılır, sesli yayıncılık, dijital ses">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/ses/podcast/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Podcast İçerik Üretimi & Prodüksiyon — Sesli Yayın Hizmetleri | Okan Kaplan">
-<meta property="og:description" content="Profesyonel podcast içerik üretimi: konsept, planlama, kayıt, montaj, düzenleme ve dağıtım gibi tüm aşamalarla markanız için etkileyici sesli yayınlar oluşturun.">
+<meta property="og:title" content="DailyMind – Podcast Nedir?">
+<meta property="og:description" content="Podcast nedir? Sesli yayıncılık, podcast üretimi ve dinleme yöntemleri hakkında temel bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/ses/podcast/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/podcast-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Podcast İçerik Üretimi & Prodüksiyon — Sesli Yayın Hizmetleri | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel podcast içerik üretimi: konsept, planlama, kayıt, montaj, düzenleme ve dağıtım gibi tüm aşamalarla markanız için etkileyici sesli yayınlar oluşturun.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/podcast-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Podcast Nedir?">
+<meta name="twitter:description" content="Podcast nedir? Sesli yayıncılık ve podcast üretimi hakkında temel ve pratik bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -50,64 +56,112 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 </head>
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
   fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
+    .then(r => r.text())
     .then(html => document.getElementById('toc-placeholder').innerHTML = html)
     .catch(e => console.error(e));
-</script>
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>🎙️ Podcast İçerik Üretimi &amp; Prodüksiyon — Sesiniz Dijitalde Buluşsun</h3><p>Podcast, hedef kitlenizle <strong>samimi ve etkili bir sesli iletişim kurmanın en güçlü yollarından biridir</strong>. Dinleyiciler, diledikleri yerden ve zamanda sesli içerikleri takip edebilirler; bu da podcast’i bilgi paylaşımı, marka hikâyesi anlatımı, eğitim ve eğlence gibi amaçlar için ideal hâle getirir. Podcast üretimi yalnızca bir ses kaydı yapmak değildir — bu süreç, <strong>stratejik planlama, kaliteli prodüksiyon ve etkili dağıtım</strong> gerektirir. </p><p><br></p><h3>📌 Podcast Nedir ve Neden Önemlidir?</h3><p>Podcast, belirli bir tema veya konu etrafında hazırlanan sesli bölümlerin dijital platformlarda yayımlanmasıdır. Podcastler; bilgi aktarımı, marka farkındalığı oluşturma, dinleyici bağlılığı sağlama ve dijital itibar kazanma açısından güçlü bir araçtır. </p><p>Bu format özellikle dijital pazarlama stratejilerinde; sektör bilgisi paylaşmak, röportajlar yapmak, eğitim ve sohbet formatlarıyla hedef kitlenizle doğrudan bir bağ kurmak isteyen markalar için oldukça etkilidir. </p><p><br></p><h3>🛠️ Podcast Prodüksiyon Sürecimiz</h3><p>Profesyonel podcast üretiminde her adım önemlidir. Hizmetimiz aşağıdaki aşamaları kapsamaktadır: </p><p><strong>Stratejik Planlama ve Konsept Geliştirme:</strong></p><p> Podcast’inizin hedef kitlesi ve içerik stratejisi belirlenir; format, konu ve bölüm planlaması yapılır. </p><p><strong>Senaryo ve Akış Tasarımı:</strong></p><p> Her bölüm için net bir akış, ilgi çekici giriş cümleleri ve konuşma planları hazırlanır. </p><p><strong>Profesyonel Kayıt &amp; Ses Prodüksiyonu:</strong></p><p> Yüksek kaliteli ekipmanlarla ses kaydı yapılır; arka plan gürültüsü giderilir, ses dengesi sağlanır ve temiz bir dinleme deneyimi yaratılır. </p><p><strong>Montaj ve Ses Düzenleme:</strong></p><p> Ses kayıtları profesyonel bir şekilde düzenlenir; müzik, jingle ve efektler eklenir, gereksiz bölümler kırpılarak akıcı bir içerik oluşturulur. </p><p><strong>Dağıtım &amp; Yayın Planlama:</strong></p><p> Podcast’inizi <strong>Spotify, Apple Podcasts, Google Podcasts</strong> gibi popüler platformlara uygun şekilde hazırlayıp entegre ederiz. </p><h3>🎧 Podcast’in Avantajları</h3><ul><li><strong>Hedef Kitle Bağlantısı:</strong> Samimi, konuşma tabanlı içerikler dinleyicilerle güçlü bağlar oluşturur. </li><li><strong>Marka Görünürlüğü:</strong> Düzenli podcast yayınları marka bilinirliğini artırır ve dijital medya portföyünüzü zenginleştirir. </li><li><strong>Esneklik:</strong> Podcastler, her zaman her yerde dinlenebilir; bu da erişim ve etkileşimi güçlendirir. </li><li><strong>Uzun Süreli Etkileşim:</strong> Uzun formatlı içerikler dinleyicilerin ilgisini daha uzun süre tutar ve sadakat yaratır. </li></ul><h3>📈 Podcast İçerikleriniz Nasıl Etkili Olur?</h3><p>Podcast’lerinizin etkisini artırmak için dinleyici analizleri, anahtar kelime stratejisi, ilgi çekici başlıklar ve düzenli yayın takvimi gibi unsurlar önem taşır. Ayrıca podcast bölümlerinin <strong>transkripsiyonları SEO açısından fayda sağlar</strong> ve içeriğin arama motorlarında bulunabilirliğini artırır. </p><p><br></p><h3>🎯 Sonuç</h3><p>Podcast içerik üretimi, markanızın dijital kimliğini güçlendiren, hedef kitlenizle bağ kuran ve uzun vadeli etkileşim sağlayan bir araçtır. Konsept geliştirmeden kayda, düzenlemeden dağıtıma kadar tüm süreçte profesyonel destekle sesinizi dijital dünyada etkili şekilde duyurun. — Okan Kaplan.</p>
+
+<h3><strong>Podcast – Sesli Yayıncılık</strong></h3>
+
+<p><strong>Podcast</strong>, internet üzerinden sunulan ve genellikle belirli bir konu, sohbet veya temayı işleyen dijital ses (ve artık video) yayınıdır; kullanıcılar istedikleri zaman dinleyebilir veya indirebilirler. Podcast’ler radyo formatının dijital versiyonu olarak düşünülebilir. :contentReference[oaicite:0]{index=0}</p>
+
+<p>Kelime olarak “podcast”, İngilizce “pod” (portatif oynatıcı) ve “broadcast” (yayın) kelimelerinin birleşiminden türetilmiştir; başlangıçta taşınabilir cihazlarda dinlenen sesli yayınlara verilen addı. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Podcast’in Özellikleri</h4>
+<ul>
+  <li>İnternet üzerinden erişilebilir sesli içerikler.</li>
+  <li>İstenildiği zaman dinlenebilen veya indirilebilen programlar.</li>
+  <li>Belirli bir tema veya konu etrafında seri hâlinde bölümler.</li>
+  <li>Birçok platformda (Spotify, Apple Podcasts, YouTube vb.) bulunabilir. :contentReference[oaicite:2]{index=2}</li>
+</ul>
+
+<h4>Neden Podcast’ler Popüler?</h4>
+<p>Podcast’ler, insanların yoğun tempo içinde tüketebileceği esnek içerikler sunar; mobil cihazlardan, bilgisayarlardan veya akıllı hoparlörlerden erişilebilir ve dinleme alışkanlıklarına uygun bir medya formatı haline gelmiştir. :contentReference[oaicite:3]{index=3}</p>
+
+<h4>Podcast Nasıl Yapılır?</h4>
+<p>Podcast üretme süreci aşağıdaki genel adımları içerir:</p>
+<ul>
+  <li><strong>Planlama:</strong> Konu, hedef kitle ve bölüm formatını belirleme.</li>
+  <li><strong>Kayıt:</strong> Mikrofon ve kayıt yazılımı ile ses kaydı (örneğin Audacity, GarageBand vb.). :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Düzenleme:</strong> Kaydı temizlemek, gereksiz sesleri çıkarmak ve efekt eklemek.</li>
+  <li><strong>Yükleme ve Dağıtım:</strong> Podcast barındırma hizmetine yükleme ve RSS ile Spotify, Apple Podcasts gibi platformlara dağıtma. :contentReference[oaicite:5]{index=5}</li>
+</ul>
+
+<h4>Podcast’lerde Ses Kalitesi</h4>
+<p>Kaliteli bir podcast için sessiz bir kayıt ortamı, iyi bir mikrofon ve net konuşma önemlidir. Kayıt sırasında arka plan gürültüsünü azaltmak ve ses seviyelerini dengelemek profesyonel bir dinleme deneyimi sağlar. :contentReference[oaicite:6]{index=6}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
