@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Web Hizmetleri — Modern Web Tasarım & Geliştirme Çözümleri | Okan Kaplan</title>
-<meta name="description" content="Profesyonel web tasarım ve geliştirme hizmetleri: responsive web siteleri, SEO uyumlu yapılar, UI/UX tasarımı, performans optimizasyonu ve dijital dönüşüm çözümleri ile işinizi dijitalde güçlendirin.">
-<meta name="keywords" content="web tasarım, web geliştirme, responsive site, UI/UX tasarımı, SEO uyumlu web, dijital ürün, performans optimizasyonu, modern web çözümleri, dijital varlık">
+
+<title>DailyMind – Web Tasarım ve Geliştirme</title>
+<meta name="description" content="Web tasarım ve web geliştirme kursu: web nedir, tasarım süreçleri, UI/UX, HTML, CSS ve modern dijital web öğrenimi hakkında kapsamlı bilgiler.">
+<meta name="keywords" content="web tasarım, web geliştirme, HTML, CSS, UI/UX, dijital öğrenim, web kursu, frontend, backend">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/web/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Web Hizmetleri — Modern Web Tasarım & Geliştirme Çözümleri | Okan Kaplan">
-<meta property="og:description" content="Profesyonel web tasarım ve geliştirme hizmetleri: responsive web siteleri, SEO uyumlu yapılar, UI/UX tasarımı, performans optimizasyonu ve dijital dönüşüm çözümleri ile işinizi dijitalde güçlendirin.">
+<meta property="og:title" content="DailyMind – Web Tasarım ve Geliştirme">
+<meta property="og:description" content="Web tasarım ve web geliştirme kursu: web nedir, tasarım süreçleri, HTML, CSS ve modern dijital web öğrenimi hakkında kapsamlı bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/web/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/web-services-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Hizmetleri — Modern Web Tasarım & Geliştirme Çözümleri | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel web tasarım ve geliştirme hizmetleri: responsive web siteleri, SEO uyumlu yapılar, UI/UX tasarımı, performans optimizasyonu ve dijital dönüşüm çözümleri ile işinizi dijitalde güçlendirin.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/web-services-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Web Tasarım ve Geliştirme">
+<meta name="twitter:description" content="Web tasarım ve web geliştirme kursu: web nedir, tasarım süreçleri, HTML, CSS ve modern dijital web öğrenimi hakkında kapsamlı bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -50,64 +56,103 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 </head>
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
-<!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
 <div id="navbar-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
 <div id="toc-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>Modern Web Tasarım ile İlk İzlenimi Güçlendirin</h3><p>Dijital dünyada bir işletmenin veya bireyin online varlığı, çoğu zaman <strong>ilk izlenimin adresidir</strong>. Okan Kaplan’ın sunduğu web hizmetleri, sadece estetik açıdan çekici değil aynı zamanda kullanıcı deneyimi odaklı, <strong>modern ve performanslı web siteleri</strong> üretmeyi hedefler. Bu hizmet kapsamında responsive tasarımı, mobil uyumlu arayüzleri ve SEO uyumlu yapıları temel alıyoruz.</p><p>Web tasarımının başarısı, yalnızca göze hitap etmekle sınırlı değildir; aynı zamanda <strong>site performansı, gezinme kolaylığı ve içerik akışı gibi kullanıcı deneyimi faktörlerini</strong> de kapsar. Bu yaklaşım, ziyaretçilerinizin sitenizde daha uzun süre kalmasını ve aradıklarını hızlıca bulmasını sağlar; böylece marka güveni ve dönüşüm oranları artar. </p><p><br></p><h3>Responsive &amp; Kullanıcı Dostu Web Siteleri</h3><p>Bugünün kullanıcıları, masaüstü bilgisayarların yanı sıra <strong>tablet ve mobil cihazlardan</strong> da sitelere erişmektedir. Bu nedenle tasarladığımız tüm web siteleri, her ekran boyutunda sorunsuz çalışacak şekilde optimize edilir. Modern, akıcı ve kullanıcı dostu arayüzler sayesinde ziyaretçiler sitenizde rahatça gezinebilir, içeriklerinize kolayca erişebilir.</p><p><br></p><h3>UI/UX Tasarımı ile Etkileşimi Artırma</h3><p>Web siteleri sadece tasarım değil, aynı zamanda <strong>kullanıcı ile etkileşim kurma biçimidir</strong>. UI/UX tasarımı, ziyaretçinin site içindeki yolculuğunu basitleştirir; önemli içerikleri daha hızlı keşfetmesini sağlar. Basit ve sezgisel navigasyon, güçlü görseller, net içerik yapısı gibi unsurlar ile web sitenizi ziyaretçiler için bir deneyime dönüştürüyoruz. </p><p><br></p><h3>SEO Uyumlu ve Performans Odaklı</h3><p>Web sitenizin başarılı olması için arama motorlarında görünür olması da şarttır. Bu nedenle, tüm sitelerimizi <strong>SEO uyumlu</strong> yapıda hazırlarız. META etiketleri, doğru başlık yapıları, hızlı yükleme süreleri ve mobil uyumluluk, arama motorlarında daha iyi performans sağlamanıza yardımcı olur. </p><p>Ayrıca, hızlı yüklenen siteler kullanıcı memnuniyetini artırır ve sitenizin Google tarafından daha iyi değerlendirilmesine katkı sağlar.</p><p><br></p><h3>İçerik ve Teknoloji Entegrasyonu</h3><p>Web hizmetlerimizde modern teknolojilerle entegrasyon bir standarttır. HTML5, CSS3, JavaScript gibi temel teknolojilerin yanı sıra ihtiyaç halinde <strong>CMS platformları</strong>, <strong>e‑ticaret çözümleri</strong> ve <strong>dinamik içerik yönetim sistemleri</strong> ile sitenizi güçlü bir dijital araca dönüştürüyoruz.</p><p>Her projenin temeli, iyi planlanmış içerik stratejisi ve doğru teknik yapılandırmadır. Sitenizin içeriği, hedef kitlenize uygun şekilde sunulur ve ziyaretçilerinizle daha etkili iletişim kurulmasına olanak tanır. </p><p><br></p><h3>Sürekli Destek &amp; Yönetim</h3><p>Web siteniz yayına girdikten sonra süreç bitmez. Biz, sitenizin performansını ve görünürlüğünü sürekli olarak takip eder, gerekli optimizasyonları yaparız. Güncellemeler, güvenlik iyileştirmeleri ve teknik destek hizmetleri ile uzun vadeli başarıyı amaçlarız.</p><p><br></p><h3>Sonuç</h3><p>Profesyonel web hizmetleri, sadece bir web sitesi oluşturmak değildir; <strong>markanızın dijitalde güçlü bir varlık göstermesini sağlamaktır</strong>. Modern tasarım, etkileyici kullanıcı deneyimi, SEO odaklı içerik ve güçlü performans ile online dünyada rakiplerinizin önünde yer alabilirsiniz. Okan Kaplan olarak burada size bu kapsamlı çözümü sunuyoruz.</p>
+
+<h3><strong>Web Tasarım &amp; Web Geliştirme</strong></h3>
+
+<p>Web, dünya genelindeki bilgisayarlar ve cihazlar arasında bilgi paylaşımını sağlayan bir ağdır ve internetin görünür yüzünü oluşturan web siteleri ile etkileşim kurmanızı sağlar. Web siteleri HTML, CSS, JavaScript gibi teknolojilerle oluşturulur. Modern web tasarımında görsel düzen, kullanıcı deneyimi ve işlevsellik birlikte ele alınır. :contentReference[oaicite:0]{index=0}</p>
+
+<h4>Web Tasarım Nedir?</h4>
+<p>Web tasarım, bir web sitesinin görsel yapısını ve kullanıcı için nasıl görüneceğini planlama ve oluşturma sürecidir. Kullanıcı deneyimi (UX) ve kullanıcı arayüzü (UI) unsurlarını kapsar; estetik, okunabilirlik ve gezinme kolaylığı sağlar. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Web Geliştirme Nedir?</h4>
+<p>Web geliştirme, web sitelerini çalışır hâle getiren teknik süreçtir: sitenin arkasındaki yazılım kodlama (HTML, CSS, JavaScript, backend dilleri) ve veri yönetimi gibi işlemleri içerir. Frontend (görsel taraf) ve backend (sunucu tarafı) geliştirme olmak üzere iki ana bölümden oluşur. :contentReference[oaicite:2]{index=2}</p>
+
+<h4>Web Tasarımın Temel Unsurları</h4>
+<ul>
+  <li><strong>UI – Kullanıcı Arayüzü:</strong> Görsel düzen, renkler ve tipografi ile estetik bir görünüm sağlar.</li>
+  <li><strong>UX – Kullanıcı Deneyimi:</strong> Sitenin ziyaretçi tarafından kolay ve etkili kullanılmasını sağlar.</li>
+  <li><strong>HTML &amp; CSS:</strong> İçerik ve stil yapısını oluşturur.</li>
+  <li><strong>JavaScript:</strong> Etkileşim ve dinamik davranış sağlar.</li>
+</ul>
+
+<h4>Web Geliştirme Eğitimi</h4>
+<p>Web geliştirme eğitimi; HTML, CSS ve JavaScript gibi temel teknolojilerin öğrenilmesinin ardından framework ve backend araçlarıyla genişletilir. Bu sayede modern ve etkileşimli web siteleri tasarlanabilir ve geliştirilebilir. :contentReference[oaicite:3]{index=3}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: videoEvents,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
