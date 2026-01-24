@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sosyal Medya İçerik Üretimi — Marka Etkileşimi & Dijital Varlık | Okan Kaplan</title>
-<meta name="description" content="Sosyal medya içerik üretimi hizmeti: stratejik planlama, özgün görsel & metin içerikler, hedef kitleye yönelik kampanya içerikleri ile marka etkileşimini artırın.">
-<meta name="keywords" content="sosyal medya içerik, sosyal medya strateji, içerik üretimi, görsel içerik, video içerik, kampanya içerikleri, dijital pazarlama, marka etkileşimi, Okan Kaplan">
+
+<title>DailyMind – Dijital İçerik &amp; Sosyal Medya</title>
+<meta name="description" content="Dijital içerik ve sosyal medya içerik üretimi: sosyal medya platformlarında etkili içerikler nasıl üretilir, stratejiler nelerdir, etkileşim nasıl artırılır?">
+<meta name="keywords" content="sosyal medya, dijital içerik, sosyal medya içerik üretimi, sosyal strateji, dijital pazarlama, etkileşim">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Sosyal Medya İçerik Üretimi — Marka Etkileşimi & Dijital Varlık | Okan Kaplan">
-<meta property="og:description" content="Sosyal medya içerik üretimi hizmeti: stratejik planlama, özgün görsel & metin içerikler, hedef kitleye yönelik kampanya içerikleri ile marka etkileşimini artırın.">
+<meta property="og:title" content="DailyMind – Dijital İçerik &amp; Sosyal Medya">
+<meta property="og:description" content="Sosyal medya için dijital içerik üretimi, stratejileri, etkileşim artırma yöntemleri ve başarılı paylaşımlar hakkında bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/dijital-icerik/sosyal-medya/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/social-media-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sosyal Medya İçerik Üretimi — Marka Etkileşimi & Dijital Varlık | Okan Kaplan">
-<meta name="twitter:description" content="Sosyal medya içerik üretimi hizmeti: stratejik planlama, özgün görsel & metin içerikler, hedef kitleye yönelik kampanya içerikleri ile marka etkileşimini artırın.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/social-media-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Dijital İçerik &amp; Sosyal Medya">
+<meta name="twitter:description" content="Sosyal medya için dijital içerik üretimi, stratejileri, etkileşim artırma yöntemleri ve başarılı paylaşımlar hakkında bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
@@ -39,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -53,63 +57,111 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 <body>
 
 <button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
 <button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
 <div id="navbar-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
 <div id="toc-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>Sosyal Medya İçerik Üretimi ile Marka Etkileşimini Artırın</h3><p>Dijital dünyada sosyal medya, markaların hedef kitleleriyle doğrudan bağlantı kurabildiği en güçlü platformlardan biridir. Etkili içerikler sayesinde sosyal medya hesapları yalnızca reklam aracı değil, aynı zamanda marka kimliğini güçlendiren ve kullanıcılarla anlamlı bağ kuran bir iletişim alanı haline gelir. Okan Kaplan olarak sunduğumuz <strong>sosyal medya içerik üretimi hizmeti</strong>, markaların bu mecralarda daha etkili, dikkat çekici ve profesyonel bir görünüm elde etmesini sağlar.</p><p><br></p><h3>Stratejik İçerik Planlama</h3><p>Başarılı bir sosyal medya varlığı, rastgele paylaşım yapmakla elde edilemez. Stratejik planlama, hedef kitle analizi ve içerik takvimi, sosyal medya üretiminin temel taşlarıdır. Her içerik, markanın hedeflerine uygun şekilde tasarlanır ve planlanır. Bu sayede gönderiler zamanında, etkili ve tutarlı bir şekilde yayımlanır.</p><p><br></p><h3>Görsel &amp; Metin İçerik Üretimi</h3><p>Sosyal medya, görselliğin metinle birleştiği dinamik bir ortamdır.</p><ul><li><strong>Özgün görsel tasarımlar</strong></li><li><strong>Kısa ve etkili metinler</strong></li><li><strong>Video kısa klipler &amp; animasyonlar</strong></li><li> Markanın imajına uygun, profesyonelce hazırlanmış içerikler ile takipçilerle etkileşim artar, marka algısı güçlenir.</li></ul><h3>Kampanyalar ve Dönüşüm Odaklı Paylaşımlar</h3><p>Sosyal medya kampanyaları, özel günlerle, sezonluk fırsatlarla veya yeni ürün/hizmet tanıtımlarıyla entegre şekilde planlanır. Doğru içerik ve CTA (Call to Action) kullanımı ile sadece etkileşim değil, <strong>dönüşüm de hedeflenir</strong>. Böylece içerikler marka bilinirliği kadar satışa ve hedef kitle eylemine dönük katkı sağlar.</p><p><br></p><h3>Performans &amp; Analiz</h3><p>Her içerik yayımlandıktan sonra performans takibi yapılır.</p><ul><li>Gönderi etkileşimleri</li><li>İzlenme &amp; erişim verileri</li><li>Dönüşüm oranları</li><li> gibi metrikler analiz edilerek içerikler optimize edilir. Bu sürekli iyileştirme süreci sayesinde strateji her zaman güncel kalır ve marka hedefleri için en etkili içerikler oluşturulur.</li></ul><h3>Sonuç</h3><p>Profesyonel sosyal medya içerik üretimi, markanızı dijitalde güçlü konuma taşır. Stratejik planlama, özgün tasarımlar, hedef odaklı kampanyalar ve performans takibi ile sosyal medya hesaplarınız sadece aktif değil <strong>etkili</strong> olur. Okan Kaplan olarak bu alanda size özgün, yaratıcı ve sonuç odaklı çözümler sunuyoruz.</p>
+
+<h3><strong>Sosyal Medya İçerik Üretimi</strong></h3>
+
+<p>Sosyal medya içerik üretimi; markaların veya bireylerin Instagram, Facebook, TikTok, LinkedIn gibi platformlarda hedef kitleleriyle etkileşim kurmak için yazı, görsel, video ve medya ögeleri oluşturma sürecidir. Bu içerikler stratejik planlama ile etkileşimi artırmak ve dijital görünürlüğü yükseltmek için tasarlanır. :contentReference[oaicite:0]{index=0}</p>
+
+<h4>Sosyal Medya Neden Önemli?</h4>
+<ul>
+  <li>Sosyal medyada özgün içerikler hedef kitle ile bağ kurar ve marka bilinirliğini artırır. :contentReference[oaicite:1]{index=1}</li>
+  <li>Farklı formatlar: metin, görsel, video ve hikaye gibi çeşitli içerikler üretilebilir. :contentReference[oaicite:2]{index=2}</li>
+  <li>Paylaşımlar etkileşimi ve geri bildirimleri artırır, kullanıcı bağlılığı sağlar. :contentReference[oaicite:3]{index=3}</li>
+</ul>
+
+<h4>Sosyal Medya İçerik Türleri</h4>
+<ul>
+  <li><strong>Metin ve Açıklama İçerikleri:</strong> Kısa ve etkileyici metinlerle mesajınızı iletin. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Görseller:</strong> Canva gibi araçlarla dikkat çekici grafikler tasarlayın. :contentReference[oaicite:5]{index=5}</li>
+  <li><strong>Videolar:</strong> Kısa videolar, hikayeler ve Reels paylaşımları ile etkileşimi artırın. :contentReference[oaicite:6]{index=6}</li>
+  <li><strong>Infografikler:</strong> Karmaşık bilgileri sade ve görsel biçimde sunun. :contentReference[oaicite:7]{index=7}</li>
+</ul>
+
+<h4>Başarılı İçerik Üretimi İçin İpuçları</h4>
+<ul>
+  <li>Hedef kitlenizi iyi analiz edin ve ilgi alanlarına uygun içerikler üretin. :contentReference[oaicite:8]{index=8}</li>
+  <li>Paylaşım zamanlamasını planlayın ve düzenli bir içerik takvimi oluşturun. :contentReference[oaicite:9]{index=9}</li>
+  <li>Hashtag ve etiket kullanımı ile erişimi artırın. :contentReference[oaicite:10]{index=10}</li>
+  <li>Her platformun dinamiklerine uygun formatlar kullanın. :contentReference[oaicite:11]{index=11}</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: videoEvents,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
