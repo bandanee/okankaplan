@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ses Düzenleme & Mastering — Profesyonel Audio Prodüksiyon | Okan Kaplan</title>
-<meta name="description" content="Profesyonel ses düzenleme ve mastering hizmeti ile podcast, müzik, reklam ve diğer ses projelerinizde yüksek kalite sağlayın. Gürültü temizleme, miksaj, dengeleme ve son mastering ile etkileyici sesler yaratın.">
-<meta name="keywords" content="ses düzenleme, ses miksajı, mastering, audio prodüksiyon, podcast düzenleme, müzik miksajı, ses mastering hizmeti, temiz ses, profesyonel ses tasarımı, Okan Kaplan">
+
+<title>DailyMind – Ses Düzenleme</title>
+<meta name="description" content="Ses düzenleme nedir? Dijital ses üzerinde ses seviyesini ayarlama, gürültü azaltma ve podcast veya müzik kayıtlarında sesi profesyonelce düzenleme tekniklerini öğrenin.">
+<meta name="keywords" content="ses düzenleme, audio editing, podcast ses düzenleme, dijital ses, DAW, ses temizleme">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/ses/duzenleme/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Ses Düzenleme & Mastering — Profesyonel Audio Prodüksiyon | Okan Kaplan">
-<meta property="og:description" content="Profesyonel ses düzenleme ve mastering hizmeti ile podcast, müzik, reklam ve diğer ses projelerinizde yüksek kalite sağlayın. Gürültü temizleme, miksaj, dengeleme ve son mastering ile etkileyici sesler yaratın.">
+<meta property="og:title" content="DailyMind – Ses Düzenleme">
+<meta property="og:description" content="Dijital ses düzenleme teknikleri: ses temizleme, kesme, kopyalama, efekt uygulama ve miksaj adımları hakkında kapsamlı bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/ses/duzenleme/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/ses-duzenleme-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ses Düzenleme & Mastering — Profesyonel Audio Prodüksiyon | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel ses düzenleme ve mastering hizmeti ile podcast, müzik, reklam ve diğer ses projelerinizde yüksek kalite sağlayın. Gürültü temizleme, miksaj, dengeleme ve son mastering ile etkileyici sesler yaratın.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/ses-duzenleme-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Ses Düzenleme">
+<meta name="twitter:description" content="Dijital ses düzenleme teknikleri: ses temizleme, kesme, kopyalama, efekt uygulama ve miksaj adımları hakkında kapsamlı bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -50,64 +56,112 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 </head>
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>🎧 Ses Düzenleme &amp; Mastering — Projelerinize Profesyonel Kalite</h3><p>Ses prodüksiyonunda teknik detaylar, projenizin profesyonel algılanmasında kritik rol oynar. <strong>Ses düzenleme</strong> ve <strong>mastering</strong> hizmetlerimiz ile podcast’leriniz, müzikleriniz, reklam ve tanıtım sesleriniz profesyonel bir kaliteyle dinleyicilere ulaşır. Bu süreçler sayesinde ham kayıtlarınız, temiz, dengeli ve dinamik bir ses deneyimine dönüşür.</p><p><br></p><h3>🎚️ Ses Düzenleme Nedir?</h3><p>Ses düzenleme, ham ses kayıtlarının <strong>temizlenmesi, optimize edilmesi ve istenmeyen seslerin giderilmesi</strong> süreçlerinin bütünüdür. Bu aşamada:</p><ul><li>Arka plan gürültüsü temizlenir</li><li>Ses seviyesi dengelenir</li><li>Kesme, kırpma ve segmentler düzenlenir</li><li>Gereksiz boğukluk ve patlamalar giderilir</li></ul><p>Böylece ses, daha net ve profesyonel bir yapıya kavuşur. Bu aşama özellikle <strong>podcast, röportaj ve sesli içeriklerde</strong> kaliteyi doğrudan artırır.</p><p><br></p><h3>🔊 Miksaj (Mixing) — Elementleri Uyumlu Hale Getirme</h3><p>Miksaj, birden fazla ses parçası olduğunda her bir kısmın birbiriyle <strong>uyumlu ve dengeli şekilde duyulmasını</strong> sağlar. Ses miksajı sürecinde:</p><ul><li>Farklı ses katmanları doğru dengeye getirilir</li><li>EQ (eşitleme) ile frekanslar optimize edilir</li><li>Stereo görüntü ve derinlik ayarları yapılır</li><li>Sesler arası geçiş ve uyum sağlanır</li></ul><p>Bu adım, projenizin çok katmanlı ses yapısının <strong>akıcı, dengeli ve profesyonel</strong> bir deneyime dönüşmesini sağlar.</p><p><br></p><h3>🎛️ Mastering — Son Kalite Kontrolü</h3><p>Mastering, ses projenizi piyasaya hazır hâle getiren son adımdır. Bu süreçte:</p><ul><li>Ses seviyesi standarize edilir</li><li>Dinamik aralık optimize edilir</li><li>Frekans dengesi son kez kontrol edilir</li><li>Çeşitli platformlara uygun formatlarda çıktı hazırlanır</li></ul><p>Mastering sayesinde ses, tüm dijital platformlarda yüksek kaliteyle çalınır ve dinleyiciye <strong>tutarlı bir dinleme deneyimi</strong> sunar.</p><p><br></p><h3>📈 Neden Profesyonel Ses Düzenleme &amp; Mastering?</h3><p><strong>Net ve temiz ses:</strong> Gürültü ve hatalar giderilerek ses daha profesyonel bir ton kazanır.</p><p> <strong>Dengeli miksaj:</strong> Farklı ses elementleri birbiriyle uyum içinde sunulur.</p><p> <strong>Platform uyumu:</strong> Podcast, müzik, video ve reklam sesleri farklı platformlarda tutarlı kalır.</p><p> <strong>Dinleyici memnuniyeti:</strong> Yüksek kalite, dinleyicide güven ve memnuniyet oluşturur.</p><p>Bu avantajlar, ses projelerinizin hem marka algısını güçlendirmesini hem de profesyonel algılanmasını sağlar.</p><p><br></p><h3>🎙️ Hangi Projelerde Kullanılır?</h3><ul><li><strong>Podcast kayıtları</strong></li><li><strong>Müzik prodüksiyonu ve single parçalar</strong></li><li><strong>Reklam ve tanıtım sesleri</strong></li><li><strong>Video ses miksleri</strong></li><li><strong>Ses efektleri ve ses tasarımı projeleri</strong></li></ul><p>Her türlü ses içeriğinde profesyonel ses düzenleme ve mastering ile kalite farkı hissedilir.</p><p><br></p><h3>🎯 Sonuç</h3><p>Ses düzenleme ve mastering, sağlam bir <strong>audio prodüksiyonun temel taşları</strong>dır. Ham kayıtlar, doğru düzenleme teknikleri ve profesyonel mastering ile <strong>daha temiz, dengeli ve etkileyici</strong> hâle gelir. Okan&nbsp;Kaplan olarak; teknik uzmanlık, deneyim ve duyusal hassasiyet ile ses projelerinizi en iyi noktaya taşımayı hedefliyoruz.</p>
+
+<h3><strong>Ses Düzenleme (Audio Editing)</strong></h3>
+
+<p><strong>Ses düzenleme</strong>, ham ses kayıtlarının kesilmesi, taşınması, kopyalanması ve efektlerle zenginleştirilmesi gibi işlemleri kapsayan dijital bir süreçtir. Düzenleme, sesin akışını iyileştirmek, hataları temizlemek ve dinleyici için net bir ürün ortaya çıkarmak amacıyla yapılır. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Ses Düzenleme Neden Önemlidir?</h4>
+<p>Ses düzenleme, yayınlanan içerikte kalite farkı yaratır. İyi düzenlenmiş bir ses dosyası, dinleyicinin dikkatini korur ve net bir anlatım sağlar; bu yüzden podcast, müzik, film ve video projelerinde düzenleme kritik bir rol oynar. :contentReference[oaicite:2]{index=2}</p>
+
+<h4>Temel Düzenleme Teknikleri</h4>
+<ul>
+  <li><strong>Kesme, Kopyalama ve Yapıştırma:</strong> Farklı ses parçalarını ayırarak istenen bölümlerle çalışmak. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>Noise Reduction (Gürültü Azaltma):</strong> Arka plan gürültülerini temizleyerek daha net bir ses elde etmek. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Seviye Ayarlama (Gain):</strong> Ses seviyelerini optimize ederek dengeli bir dinleme deneyimi sunmak. :contentReference[oaicite:5]{index=5}</li>
+  <li><strong>Efektler:</strong> EQ (eşitleme), compression gibi ses karakterini iyileştiren işlemler. :contentReference[oaicite:6]{index=6}</li>
+</ul>
+
+<h4>Dijital Ses Düzenleme Araçları</h4>
+<p>Ses düzenleme genellikle bir **DAW (Digital Audio Workstation)** üzerinde yapılır. Yaygın düzenleme yazılımları arasında Audacity (ücretsiz), Reaper, Adobe Audition gibi araçlar bulunur. :contentReference[oaicite:7]{index=7}</p>
+
+<h4>Ses Düzenleme Süreci – Adımlar</h4>
+<p>Tipik bir düzenleme süreci genelde şu adımları içerir:</p>
+<ul>
+  <li><strong>Import (İçe Aktarma):</strong> Ham ses dosyalarının editöre aktarılması.</li>
+  <li><strong>Temizleme:</strong> Gürültü ve gereksiz seslerin çıkarılması.</li>
+  <li><strong>Trim &amp; Arrange:</strong> Ses kliplerinin kesilip yerleştirilmesi.</li>
+  <li><strong>Efekt Uygulama:</strong> EQ, compression, fade gibi etkilerin eklenmesi. :contentReference[oaicite:8]{index=8}</li>
+  <li><strong>Export (Dışa Aktarma):</strong> Sonucun nihai ses formatına dönüştürülmesi.</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
