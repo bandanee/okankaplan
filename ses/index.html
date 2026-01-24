@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ses & Ses Üretimi Hizmetleri — Podcast, Jingle, Seslendirme | Okan Kaplan</title>
-<meta name="description" content="Profesyonel ses üretimi ve ses tasarımı hizmetleri: podcast prodüksiyonu, reklam jingle’ları, seslendirme ve ses miksajıyla markanız için etkileyici işitsel içerikler oluşturun.">
-<meta name="keywords" content="ses üretimi, ses tasarımı, podcast prodüksiyonu, reklam jingle, seslendirme, miksaj, mastering, audio post‑prodüksiyon, Okan Kaplan">
+
+<title>DailyMind – Ses Teknolojisi</title>
+<meta name="description" content="Ses nedir? Dijital ses teknolojisi, 3D ses nedir ve dijital ortamlarda sesi nasıl işleyebiliriz? Temel ses kavramlarını, uygulama alanlarını ve modern ses teknolojilerini öğrenin.">
+<meta name="keywords" content="ses, dijital ses, 3D ses, uzamsal ses, Web Audio, ses teknolojisi, ses deneyimi, ses tasarımı">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/ses/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Ses & Ses Üretimi Hizmetleri — Podcast, Jingle, Seslendirme | Okan Kaplan">
-<meta property="og:description" content="Profesyonel ses üretimi ve ses tasarımı hizmetleri: podcast prodüksiyonu, reklam jingle’ları, seslendirme ve ses miksajıyla markanız için etkileyici işitsel içerikler oluşturun.">
+<meta property="og:title" content="DailyMind – Ses Teknolojisi">
+<meta property="og:description" content="Sesin ne olduğunu, dijital sesin temel özelliklerini ve modern ses teknolojilerini keşfedin. 3D ve uzamsal ses ile daha etkileyici ses deneyimleri oluşturun.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/ses/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/ses-services-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ses & Ses Üretimi Hizmetleri — Podcast, Jingle, Seslendirme | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel ses üretimi ve ses tasarımı hizmetleri: podcast prodüksiyonu, reklam jingle’ları, seslendirme ve ses miksajıyla markanız için etkileyici işitsel içerikler oluşturun.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/ses-services-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Ses Teknolojisi">
+<meta name="twitter:description" content="Sesin ne olduğunu, dijital sesin temel özelliklerini ve modern ses teknolojilerini keşfedin. 3D ve uzamsal ses ile daha etkileyici ses deneyimleri oluşturun.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
+
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
 main { max-width:900px; margin:2rem auto; padding:2rem; background:#fff; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
@@ -37,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -48,66 +54,113 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .catch(e => console.error("ek_head yüklenemedi", e));
 </script>
 </head>
+
 <body>
 
-<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
-<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
+<button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">&#9776;</button> 
+<button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-<div id="navbar-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-<div id="toc-placeholder"></div>
-<script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
-</script>
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+  <div id="toc-placeholder"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+      .catch(e => console.error(e));
+  </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<h3>🎙️ Ses &amp; Ses Üretimi Hizmetleri — Marka Hikâyenizi Dinletin</h3><p>Günümüz dijital dünyasında içerik sadece görsel değil aynı zamanda <strong>işitsel olarak da güçlü olmalıdır</strong>. Ses, duygulara hitap eden ve mesajı daha etkili kılan bir araçtır. Okan Kaplan’ın sunduğu <strong>ses &amp; ses üretimi hizmetleri</strong>, markanızın dijital iletişimini güçlendirerek hedef kitlenizle daha derin bağ kurmanıza yardımcı olur.</p><p>Ses prodüksiyonu, içeriklerinizin duyulabilirliğini ve profesyonelliğini artırır. Podcast’leriniz, reklam filmleriniz, eğitim videolarınız ya da tanıtım içerikleriniz için özel olarak hazırlanmış sesler, dinleyicinin dikkatini çekmek ve mesajı net şekilde iletmek için kritik bir unsurdur. </p><p><br></p><h3>🎧 Podcast &amp; Dijital Ses İçerik Üretimi</h3><p>Podcast formatı, marka hikâyenizi etkili bir şekilde anlatırken aynı zamanda hedef kitlenizle <strong>samimi bir bağlantı kurmanın</strong> yollarından biridir. Konsept geliştirme, kayıt, ses düzenleme, miksaj ve mastering süreçlerini kapsayan profesyonel podcast prodüksiyon hizmeti, içeriklerinizin dinleyiciye <em>net, temiz ve etkileyici</em> ulaşmasını sağlar. </p><p><br></p><h3>🔊 Reklam Jingle’ları &amp; Kampanya Sesleri</h3><p>Kısa süreli fakat akılda kalıcı sesler, markanızın tanıtım kampanyalarının etkisini yükseltir. Reklamlar için özel olarak hazırlanan <strong>jingle’lar</strong>, radyo ve dijital mecralarda marka farkındalığını artırmaya yardımcı olur. </p><p><br></p><h3>🗣️ Seslendirme &amp; Anlatım</h3><p>Reklam filmleri, tanıtım videoları, eğitim içerikleri ve kurumsal sunumlar için profesyonel seslendirme hizmeti sunuyoruz. Metnin duyusal etkisini artırmak için doğru ton, vurgu ve tempo ile ses kayıtları hazırlanır. Bu süreçte stüdyo kalitesinde ekipmanlar ve deneyimli ses sanatçıları ile çalışılır. </p><p><br></p><h3>🔄 Ses Miksajı &amp; Mastering</h3><p>Ham ses kayıtları, profesyonel bir ses prodüksiyon sürecinden geçerek son halini alır. Ses miksajı ile farklı ses parçaları doğru seviyede dengelenir, mastering ile ses kalitesi optimize edilir ve tüm platformlarda yüksek kalite standartlarında dinlenebilir hale gelir. </p><p><br></p><h3>📣 Ses Tasarımı &amp; Efektler</h3><p>Projelerinizde atmosfer yaratırken ses efektlerinin önemi büyüktür. Ses efektleri, ortam hissini güçlendirir, anlatımı destekler ve izleyicinin duygusal tepkisini artırır. Bu nedenle ses tasarımı; foley, ambiyans sesleri ve diğer özgün efektlerle proje içerisine entegre edilir. </p><p><br></p><h3>📈 Neden Profesyonel Ses Hizmeti?</h3><p>Profesyonel ses üretimi markanızın dijital içeriklerini sadece duyulur hâle getirmekle kalmaz; aynı zamanda:</p><ul><li><strong>Mesajınızı net ve etkileyici iletir</strong>,</li><li><strong>Dinleyici ile duygusal bağ kurar</strong>,</li><li><strong>Marka algısını güçlendirir</strong>,</li><li><strong>Çeşitli platformlarda kalite standardı sağlar.</strong> </li></ul><h3>🎯 Sonuç</h3><p>Ses &amp; ses üretimi hizmetlerimiz, dijital içeriklerinizin <strong>anlatım gücünü ve profesyonelliğini artırmak</strong> için tasarlandı. İster podcast, ister tanıtım videosu, ister reklam kampanyası olsun — doğru ses, hedef kitlenizin kulağına direkt ulaşır. Okan Kaplan olarak size bu süreçte yaratıcı, teknik ve stratejik destek sağlıyoruz.</p>
+
+<h3><strong>Ses Teknolojisi &amp; Dijital Ses</strong></h3>
+
+<p>Ses, bir ortamda yayılan titreşimlerin kulak tarafından algılanmasıyla oluşan duyusal bir deneyimdir. Bu titreşimler dijital ortamlarda elektronik sinyallere dönüştürülerek depolanabilir, işlenebilir ve iletilebilir. ([turn0search2])</p>
+
+<h4>Dijital Ses Nedir?</h4>
+<p>Dijital ses; ses dalgalarının sayısal verilere dönüştürülmesiyle elde edilen ses biçimidir. Analog ses, dijital ortama örnekleme (sampling) ve sayısallaştırma yoluyla aktarılır; bu sayede bilgisayarlar ve diğer dijital cihazlar sesi işler ve yeniden üretir. ([turn0search24])</p>
+
+<h4>Ses Teknolojilerinin Temel Bileşenleri</h4>
+<ul>
+  <li><strong>Mikrofon:</strong> Ses dalgalarını elektrik sinyallerine dönüştürür. ([turn0search2])</li>
+  <li><strong>Ses İşlemci:</strong> Ses sinyallerinin filtrelenmesi, amplifikasyonu ve dijital işleme için kullanılır. ([turn0search2])</li>
+  <li><strong>Hoparlör:</strong> Elektronik sinyallerden ses dalgaları üretir. ([turn0search2])</li>
+  <li><strong>Web ve Yazılım Araçları:</strong> Web Audio API gibi araçlar; tarayıcıda ses oluşturma, çalma ve etkileşimli ses deneyimleri sağlar.</li>
+</ul>
+
+<h4>3D Ses ve Uzamsal Ses</h4>
+<p>3D ses, sesin dinleyici etrafında derinlik ve yön hissiyle konumlandırıldığı bir ses deneyimidir. Bu sayede ses yalnızca iki kanaldan değil, üç boyutlu olarak algılanabilir. Bu tür ses deneyimi özellikle oyun, VR/AR ve sinema gibi ortamlarda popülerdir. Buna benzer teknoloji “uzamsal ses” olarak adlandırılır ve geleneksel stereo sesin ötesinde bir deneyim sağlar. ([turn0search4][turn0search10])</p>
+
+<h4>Sesin Uygulama Alanları</h4>
+<p>Ses teknolojisi; birçok alanda kullanılır:</p>
+<ul>
+  <li><strong>Müzik ve Medya:</strong> Ses kayıtları, miks ve mastering gibi üretim süreçleri.</li>
+  <li><strong>Oyun ve VR:</strong> Uzamsal 3D sesler ile daha immersif deneyimler.</li>
+  <li><strong>Web Uygulamaları:</strong> Web Audio API ile oyun sesleri, etkileşimli içerikler ve 3D ses efektleri oluşturma.</li>
+  <li><strong>İletişim:</strong> Sesli sohbet, VoIP ve gerçek zamanlı ses aktarımı gibi uygulamalar.</li>
+</ul>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: JSON.parse(data.contents),
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-
-
 <div id="footer-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
-    .then(r => {
-      if (!r.ok) throw new Error('footer.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('footer-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
