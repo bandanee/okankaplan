@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog İçerik Üretimi — SEO Uyumlu ve Etkileşimli Yazılar | Okan Kaplan</title>
-<meta name="description" content="Profesyonel blog içerik üretimi hizmetleri. SEO uyumlu, değer odaklı ve etkileşimli içeriklerle markanızın dijital görünürlüğünü artırın ve hedef kitlenize ulaşın.">
-<meta name="keywords" content="blog içerik, SEO uyumlu yazı, dijital içerik, içerik pazarlama, marka iletişimi, etkileşimli içerik, SEO optimizasyon, hedef kitle, içerik stratejisi, Okan Kaplan">
+
+<title>DailyMind – Dijital İçerik Blog</title>
+<meta name="description" content="Dijital içerik blogu: blog nedir, dijital içerik stratejileri, blog yazarlığı ipuçları ve içerik üretimi hakkında kapsamlı bilgiler.">
+<meta name="keywords" content="blog, dijital içerik, içerik üretimi, blog yazarlığı, içerik stratejisi, SEO, dijital pazarlama">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Blog İçerik Üretimi — SEO Uyumlu ve Etkileşimli Yazılar | Okan Kaplan">
-<meta property="og:description" content="Profesyonel blog içerik üretimi hizmetleri. SEO uyumlu, değer odaklı ve etkileşimli içeriklerle markanızın dijital görünürlüğünü artırın ve hedef kitlenize ulaşın.">
+<meta property="og:title" content="DailyMind – Dijital İçerik Blog">
+<meta property="og:description" content="Dijital içerik blogu: blog nedir, dijital içerik stratejileri, blog yazarlığı ipuçları ve içerik üretimi hakkında kapsamlı bilgiler.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bandanee.github.io/okankaplan/dijital-icerik/blog/">
-<meta property="og:image" content="https://bandanee.github.io/okankaplan/assets/blog-thumbnail.jpg">
+<meta property="og:image" content="">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog İçerik Üretimi — SEO Uyumlu ve Etkileşimli Yazılar | Okan Kaplan">
-<meta name="twitter:description" content="Profesyonel blog içerik üretimi hizmetleri. SEO uyumlu, değer odaklı ve etkileşimli içeriklerle markanızın dijital görünürlüğünü artırın ve hedef kitlenize ulaşın.">
-<meta name="twitter:image" content="https://bandanee.github.io/okankaplan/assets/blog-thumbnail.jpg">
+<meta name="twitter:title" content="DailyMind – Dijital İçerik Blog">
+<meta name="twitter:description" content="Dijital içerik blogu: blog nedir, dijital içerik stratejileri, blog yazarlığı ipuçları ve içerik üretimi hakkında kapsamlı bilgiler.">
+<meta name="twitter:image" content="">
+
+<!-- FullCalendar -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
 <!-- FontAwesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-<!-- Özel CSS -->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/bandanee/root/main/import/style.css">
 
 <style>
 body { font-family: 'Montserrat', sans-serif; padding-top: 56px; background:#f5f5f5;}
@@ -39,10 +44,9 @@ footer a { color:#ffc107; text-decoration:none;}
 footer a:hover { text-decoration:underline;}
 #offcanvasLeftToggle { position: fixed; top:10px; left:10px; z-index:1080;}
 #offcanvasRightToggle { position: fixed; top:10px; right:10px; z-index:1080;}
-  .offcanvas {
-  overflow: auto; /* içerik taşarsa kaydırma çubuğu gelsin */
-}
+.offcanvas { overflow: auto; }
 </style>
+
 <script>
 fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
   .then(r => r.text())
@@ -53,57 +57,101 @@ fetch("https://raw.githubusercontent.com/bandanee/root/main/import/head.html")
 <body>
 
 <button class="btn btn-primary" id="offcanvasLeftToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">&#9776;</button> 
-
 <button class="btn btn-success" id="offcanvasRightToggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fas fa-comment-dots"></i></button>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee.</a>
+    <a class="navbar-brand" href="https://bandanee.github.io/okankaplan/" style="padding-left:40px">Bandanee Okankaplan</a>
   </div>
 </nav>
 
 <!-- Sol Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
 <div id="navbar-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/nav.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<!-- Sağ Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
 <div id="toc-placeholder"></div>
 <script>
-  fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
-    .then(r => {
-      if (!r.ok) throw new Error('nav.html yüklenemedi');
-      return r.text();
-    })
-    .then(html => document.getElementById('toc-placeholder').innerHTML = html)
-    .catch(e => console.error(e));
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/toc.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('toc-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
 </script>
 </div>
 
-<!-- Main içerik -->
 <div class="container my-4">
 <main class="col-12 col-lg-9 mx-auto">
-<p><strong>Blog İçerik Üretimi ile Marka Değerinizi Arttırın</strong></p><p> Günümüz dijital dünyasında blog içerikleri, markaların hem arama motorlarında görünürlüğünü artırmak hem de hedef kitleyle etkili iletişim kurmak için en önemli araçlardan biridir. Okan Kaplan olarak sunduğumuz <strong>blog içerik üretimi hizmeti</strong>, markaların online görünürlüğünü güçlendiren, SEO uyumlu ve kullanıcı odaklı yazılarla desteklenir.</p><p><strong>SEO Uyumlu ve Değer Odaklı İçerik</strong></p><p> Her blog yazısı, hedef kitle analizi ve anahtar kelime stratejisi ile hazırlanır. İçeriklerimiz, arama motorlarında üst sıralarda yer almayı hedeflerken aynı zamanda okuyucuya değer katar. Konu araştırması, rakip analizi ve özgün içerik oluşturma süreçleri, markanızın dijital kimliğini güçlendirir.</p><p><strong>Etkileşim ve Kullanıcı Deneyimi Odaklı Yazılar</strong></p><p> Blog içeriklerimiz sadece bilgilendirici değil, aynı zamanda etkileşim sağlamaya yönelik olarak tasarlanır. Okuyucuların paylaşım yapmasını, yorum bırakmasını ve markanızla bağlantı kurmasını teşvik eden içerikler üretiriz.</p><p><strong>Dijital Pazarlama ve İçerik Stratejisi</strong></p><p> Blog içerikleri, dijital pazarlama stratejisinin temel taşlarından biridir. Üretilen içerikler sosyal medya paylaşımları, e-posta bültenleri ve diğer dijital kanallarla entegre edilerek marka bilinirliği ve etkileşim artırılır.</p><p><strong>Analiz ve Optimizasyon</strong></p><p> Her içerik yayınlandıktan sonra performans verileri takip edilir. Okunma oranları, etkileşim ve SEO performansı analiz edilerek içerikler optimize edilir ve sürekli iyileştirme sağlanır.</p><p><strong>Sonuç</strong></p><p> Profesyonel blog içerik üretimi ile markanız hem arama motorlarında güçlü bir görünürlük kazanır hem de hedef kitlenizle kalıcı ve etkili bir iletişim kurar. Okan Kaplan olarak size bu süreçte stratejik ve kaliteli içerik çözümleri sunuyoruz.</p>
+
+<h3><strong>Dijital İçerik Blogu</strong></h3>
+
+<p>Blog, dijital ortamda düzenli olarak yayınlanan yazı, video ve medya paylaşımlarını içeren bir içerik türüdür. Blog yazıları genellikle belirli bir konu etrafında düşünce, bilgi ve deneyim paylaşmak amacıyla hazırlanır ve okuyuculara değerli bilgiler sunar. Bir blog postu, metin, görsel, video veya diğer medya türlerini içerebilir. :contentReference[oaicite:0]{index=0}</p>
+
+<p>Dijital içerik blogları, bir markanın veya bireyin hedef kitlesiyle bağ kurmasını sağlayan stratejik araçlardır. SEO uyumlu blog içerikleri ile arama motoru görünürlüğünüzü artırabilir ve organik trafik çekebilirsiniz. :contentReference[oaicite:1]{index=1}</p>
+
+<h4>Blog Yazarlığı ve İçerik Üretimi</h4>
+<ul>
+  <li><strong>Blog Nedir?</strong> Blog, tutarlı şekilde içeriklerin paylaşıldığı internet günlükleridir; fikir, bilgi ve deneyim aktarımı yapar. :contentReference[oaicite:2]{index=2}</li>
+  <li><strong>Dijital İçerik Üretimi:</strong> Blog içerikleri dijital ortamda yayınlanarak geniş kitlelere bilgi sağlar. :contentReference[oaicite:3]{index=3}</li>
+  <li><strong>SEO ve Strateji:</strong> Blog içerikleri, hedef anahtar kelimelerle optimize edilerek arama motoru performansını artırabilir. :contentReference[oaicite:4]{index=4}</li>
+  <li><strong>Okuyucu Etkileşimi:</strong> Yorumlar, paylaşımlar ve sosyal medya entegrasyonu ile blog daha etkileşimli hale gelir. :contentReference[oaicite:5]{index=5}</li>
+</ul>
+
+<h4>Blog’un İşlevi</h4>
+<p>Bloglar, hem kişisel deneyimlerin paylaşıldığı mecralar hem de markaların dijital varlıklarını güçlendirdiği pazarlama araçlarıdır. Düzenli olarak güncellenen içerikler, hedef kitlenizle güven ve bağ oluşturmanıza yardımcı olur. :contentReference[oaicite:6]{index=6}</p>
+
+<hr>
+
+<div id="kategoriler-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/DailyMind/main/kategoriler.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('kategoriler-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
+
+<div id="calendar-container" class="mt-4"><div id="calendar"></div></div>
+<style>
+#calendar-container { max-width: 100%; overflow: hidden; }
+.fc { font-size: 0.85rem; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://raw.githubusercontent.com/bandanee/DailyMind/main/calendar.json'))
+    .then(res => res.json())
+    .then(data => {
+      const videoEvents = JSON.parse(data.contents);
+      const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+        initialView: 'dayGridMonth',
+        locale: 'tr',
+        events: videoEvents,
+        headerToolbar: { left:'prev,next today', center:'title', right:'' }
+      });
+      calendar.render();
+    });
+});
+</script>
+
 </main>
 </div>
 
-<!-- Footer -->
-<footer>
-<div class="container">
-<p>&copy; 2026 Okan Kaplan. | <a href="#">Gizlilik Politikası</a> | <a href="#">İletişim</a></p>
-</div>
-</footer>
+<div id="footer-placeholder"></div>
+<script>
+fetch('https://raw.githubusercontent.com/bandanee/root/main/import/footer.html')
+  .then(r => r.text())
+  .then(html => document.getElementById('footer-placeholder').innerHTML = html)
+  .catch(e => console.error(e));
+</script>
 
-<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
